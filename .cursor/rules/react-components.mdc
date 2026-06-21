@@ -1,0 +1,25 @@
+---
+description: React component patterns — shadcn, cn(), folder structure, no inline styles
+globs: **/*.tsx
+alwaysApply: false
+---
+
+# React Components
+
+## Structure
+
+- shadcn/ui primitives → `src/components/ui/`
+- Shared app components → `src/components/common/`
+- Feature components → `src/components/<feature>/` (e.g. `home/`)
+
+## Conventions
+
+- Use `cn()` from `@/lib/utils` for conditional/dynamic class composition.
+- Use shadcn/ui for all UI primitives (Button, Input, Dialog, Sheet, etc.).
+- `.tsx` files wire UI only — no embedded magic values.
+- **No inline `style={{}}`** — always use `className` with Tailwind.
+- **No prop types in `.tsx`** — import types from `@/types`.
+
+## Client vs Server
+
+Default to Server Components. Mark `"use client"` only for: mouse tracking, particles, counters, hover animations, Framer Motion.

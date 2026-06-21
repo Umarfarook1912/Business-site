@@ -1,0 +1,25 @@
+---
+description: TypeScript types live in .ts files only, not in .tsx components
+globs: **/*.{ts,tsx}
+alwaysApply: false
+---
+
+# TypeScript Types
+
+All `interface`, `type`, DTOs, component props, and unions live in `.ts` files under `src/types/` (e.g. `src/types/ui/` for shared component props).
+
+`.tsx` files may import types:
+
+```typescript
+import type { GlowCardProps } from "@/types";
+```
+
+Do **not** declare domain or component prop types inside `.tsx` files.
+
+Small re-export lines in `.tsx` for backwards-compatible public API are allowed:
+
+```typescript
+export type { LoaderProps } from "@/types";
+```
+
+Re-export shared types from `src/types/index.ts`.

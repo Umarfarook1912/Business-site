@@ -1,0 +1,16 @@
+---
+description: Growza core standards — DRY, file size, mobile-first, performance
+alwaysApply: true
+---
+
+# Growza Core Standards
+
+- Read existing code structure before writing new code; reuse components and utilities (DRY).
+- No file may exceed **200 lines**; split into smaller focused files when approaching the limit.
+- **Mobile-first** responsive design; test layouts from smallest breakpoint up.
+- Prefer **Server Components** by default; add `"use client"` only when interactivity requires it.
+- Lazy-load heavy client widgets with `dynamic(() => import(...), { ssr: false })`.
+- Use `next/image` for all images with explicit dimensions to prevent layout shift.
+- Framer Motion: use `whileInView` + `viewport={{ once: true }}` for scroll animations.
+- Respect `prefers-reduced-motion` in CSS and animation components.
+- Use semantic React component names (e.g. `HeroSection`, `GlowCard`, `StatsCounter`).

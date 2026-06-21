@@ -1,0 +1,31 @@
+---
+description: Constants, routes, and assets — no magic values in UI files
+globs: **/*.{ts,tsx}
+alwaysApply: false
+---
+
+# Constants and Routes
+
+## Copy and literals
+
+Never hardcode string/number literals for product UI (copy, labels, regex, dimensions, query keys, etc.) in `.tsx` files. Define them in `src/lib/constants/*.ts` and import via `@/lib/constants`.
+
+## Routes
+
+Never hardcode in-app URL paths in components. Use `src/lib/constants/routes.ts` (`ROUTES`) and route helpers.
+
+## Assets
+
+Never hardcode public asset paths. Import from `src/lib/constants/assets.ts` (`PUBLIC_ASSETS`, etc.).
+
+## Example
+
+```typescript
+// ❌ BAD — in a component
+<Link href="/consultation">Get Free Consultation</Link>
+
+// ✅ GOOD
+import { ROUTES } from "@/lib/constants";
+import { HOME_HERO } from "@/lib/constants/home";
+<Link href={ROUTES.consultation}>{HOME_HERO.primaryCta}</Link>
+```

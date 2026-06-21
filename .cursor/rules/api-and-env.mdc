@@ -1,0 +1,31 @@
+---
+description: API base URL via env.ts, endpoints in api.ts, hooks in src/hooks/
+globs: src/**/*.{ts,tsx}
+alwaysApply: false
+---
+
+# API and Environment
+
+## Environment
+
+Backend API base URL → `NEXT_PUBLIC_API_BASE_URL` in `.env.local`, read via `src/lib/env.ts` (`getPublicApiBaseUrl()`). Never hardcode hosts in code.
+
+## API paths
+
+API path segments only → `src/lib/constants/api.ts` (`API_ENDPOINTS`).
+
+## Data fetching
+
+Custom data-fetching hooks → `src/hooks/use<Feature>.ts`.
+
+## Example
+
+```typescript
+// ❌ BAD
+const res = await fetch("https://api.example.com/users");
+
+// ✅ GOOD
+import { getPublicApiBaseUrl } from "@/lib/env";
+import { API_ENDPOINTS } from "@/lib/constants/api";
+const res = await fetch(`${getPublicApiBaseUrl()}${API_ENDPOINTS.users}`);
+```

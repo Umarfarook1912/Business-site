@@ -1,0 +1,30 @@
+---
+description: Growza brand design tokens — dark/gold luxury aesthetic, no hardcoded colors or fonts
+globs: **/*.{tsx,css}
+alwaysApply: false
+---
+
+# Design Tokens
+
+## Colors
+
+Never hardcode colors in components. Import from `@/lib/constants/colors` or use CSS variables from `globals.css` (`--color-brand-*`).
+
+Approved palette:
+- Background: `#0A0A0A`, `#111111`, `#1A1A1A`
+- Gold: `#D4AF37`; gradient `#FFD700 → #D4AF37 → #B8860B`
+- Text: `#FFFFFF`, `#E5E5E5`
+- Accents: gold highlights only
+
+Avoid bright colors, cartoon illustrations, and generic template aesthetics.
+
+## Typography
+
+Never hardcode font families, sizes, or weights. Use `TYPO` / feature constants from `@/lib/constants/typography`. Do not use arbitrary `text-[…]` or inline font styles.
+
+## Styling
+
+- No inline `style={{}}` — use `className` with Tailwind utilities.
+- Dynamic visual values → add tokens to `globals.css` `@theme` / `:root`, reference via `var(--…)`.
+- Premium patterns: glassmorphism, gold glow borders, subtle gradients, Framer Motion.
+- Prefer CSS variables + `@theme` over arbitrary Tailwind value classes.
