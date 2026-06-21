@@ -1,5 +1,5 @@
 export const PUBLIC_ASSETS = {
-  dashboardMockup: "/assets/dashboard-mockup.svg",
+  dashboardMockup: "/assets/cover-image.png",
   ogImage: "/assets/og-image.svg",
   favicon: "/favicon.ico",
 } as const;

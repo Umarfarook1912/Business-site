@@ -14,9 +14,9 @@ export const TYPO = {
     "font-sans text-base leading-relaxed text-brand-text-secondary sm:text-lg",
   cardTitle: "font-heading text-xl font-semibold text-brand-text-primary",
   cardBody: "font-sans text-sm leading-relaxed text-brand-text-secondary",
-  statValue: "font-heading text-4xl font-bold text-brand-gold sm:text-5xl",
+  statValue: "font-heading text-4xl font-bold text-white sm:text-5xl",
   statLabel: "font-sans text-sm font-medium text-brand-text-secondary",
-  footerBrand: "font-heading text-2xl font-bold text-brand-gold",
+  footerBrand: "font-heading text-2xl font-bold text-white",
   footerTagline: "font-sans text-sm text-brand-text-secondary",
   chipLabel: "font-sans text-sm font-medium text-brand-text-primary",
 } as const;

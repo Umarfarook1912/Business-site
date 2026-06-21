@@ -29,7 +29,7 @@ export function IndustriesSection() {
   return (
     <section
       id={HOME_SECTIONS.industries.id}
-      className="bg-brand-bg-primary px-6 py-24"
+      className="bg-transparent px-6 py-24"
     >
       <div className="mx-auto max-w-7xl">
         <SectionHeader
@@ -49,7 +49,7 @@ export function IndustriesSection() {
               key={industry}
               variants={chipVariants}
               className={cn(
-                "glass-card gold-glow-hover rounded-full px-6 py-3",
+                "glass-card mono-glow-hover rounded-full px-6 py-3",
                 TYPO.chipLabel
               )}
             >

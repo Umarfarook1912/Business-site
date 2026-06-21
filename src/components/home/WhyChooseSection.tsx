@@ -30,7 +30,7 @@ export function WhyChooseSection() {
   return (
     <section
       id={HOME_SECTIONS.whyChoose.id}
-      className="bg-brand-bg-secondary px-6 py-24"
+      className="bg-transparent px-6 py-24"
     >
       <div className="mx-auto max-w-7xl">
         <SectionHeader

@@ -68,7 +68,7 @@ export function ParticleField({ className }: ParticleFieldProps) {
 
         ctx.beginPath();
         ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
-        ctx.fillStyle = `rgba(212, 175, 55, ${p.opacity})`;
+        ctx.fillStyle = `rgba(255, 255, 255, ${p.opacity * 0.4})`; // softer white particles
         ctx.fill();
       }
 

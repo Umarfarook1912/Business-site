@@ -8,6 +8,10 @@ export const BRAND_COLORS = {
   textPrimary: "var(--color-brand-text-primary)",
   textSecondary: "var(--color-brand-text-secondary)",
   gradientGold: "var(--gradient-gold-luxury)",
+  accent: "var(--color-brand-gold)",
+  accentLight: "var(--color-brand-gold-light)",
+  accentDark: "var(--color-brand-gold-dark)",
+  gradientAccent: "var(--gradient-gold-luxury)",
 } as const;
 
 export const BRAND_COLOR_CLASSES = {
@@ -18,4 +22,6 @@ export const BRAND_COLOR_CLASSES = {
   textSecondary: "text-brand-text-secondary",
   textGold: "text-brand-gold",
   borderGold: "border-brand-gold",
+  textAccent: "text-brand-gold",
+  borderAccent: "border-brand-gold",
 } as const;

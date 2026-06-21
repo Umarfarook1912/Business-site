@@ -1,16 +1,16 @@
 export const SITE = {
   name: "Growza",
   tagline: "Building Digital Growth",
-  title: "Growza | Premium Digital Solutions for Growing Businesses",
+  title: "Growza | Premium Digital Solutions",
   description:
-    "We build high-performance websites, web applications, and business automation systems that help companies scale faster.",
-  url: "https://growza.com",
-  metadataBase: "https://growza.com",
+    "We build high-performance websites, custom web applications, and business automation systems that help companies scale faster.",
+  url: "https://github.com/Umarfarook1912",
+  metadataBase: "https://github.com/Umarfarook1912",
   locale: "en_US",
 } as const;
 
 export const CONTACT = {
-  email: "hello@growza.com",
-  phone: "+1 (555) 123-4567",
-  address: "123 Growth Avenue, Suite 100, New York, NY 10001",
+  email: "growza@gmail.com",
+  phone: "+91 78716 94931",
+  address: "Dindigul, Tamil Nadu, India",
 } as const;

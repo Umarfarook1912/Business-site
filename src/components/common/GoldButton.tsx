@@ -4,9 +4,9 @@ import type { GoldButtonProps } from "@/types";
 
 const variantClasses = {
   primary:
-    "bg-brand-gold text-brand-bg-primary hover:gold-glow hover:brightness-110",
+    "bg-white text-black hover:mono-glow hover:bg-neutral-200",
   ghost:
-    "border border-brand-gold/40 bg-transparent text-brand-gold hover:border-brand-gold hover:bg-brand-gold/10",
+    "border border-white/40 bg-transparent text-white hover:border-white hover:bg-white/10",
 } as const;
 
 export function GoldButton({

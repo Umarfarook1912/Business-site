@@ -17,4 +17,6 @@ export type PortfolioItem = {
   title: string;
   category: string;
   description: string;
+  githubUrl?: string;
+  projectUrl?: string;
 };

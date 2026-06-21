@@ -1,6 +1,5 @@
 "use client";
 
-import dynamic from "next/dynamic";
 import Image from "next/image";
 import { motion, useReducedMotion } from "framer-motion";
 import { GoldButton } from "@/components/common/GoldButton";
@@ -17,17 +16,6 @@ import {
 } from "@/lib/constants";
 import { HOME_TYPO } from "@/lib/constants/typography";
 import { SITE } from "@/lib/constants/site";
-
-const ParticleField = dynamic(
-  () =>
-    import("@/components/common/ParticleField").then((m) => m.ParticleField),
-  { ssr: false }
-);
-
-const Spotlight = dynamic(
-  () => import("@/components/common/Spotlight").then((m) => m.Spotlight),
-  { ssr: false }
-);
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -50,10 +38,7 @@ export function HeroSection() {
   const prefersReducedMotion = useReducedMotion();
 
   return (
-    <section className="relative flex min-h-screen items-center overflow-hidden bg-brand-bg-primary">
-      <ParticleField />
-      <Spotlight />
-
+    <section className="relative flex min-h-screen items-center overflow-hidden bg-transparent">
       <div className="relative z-10 mx-auto grid w-full max-w-7xl gap-12 px-6 py-24 lg:grid-cols-2 lg:items-center lg:py-32">
         <motion.div
           variants={containerVariants}
@@ -63,7 +48,7 @@ export function HeroSection() {
         >
           <motion.p
             variants={itemVariants}
-            className="font-heading text-sm font-medium uppercase tracking-widest text-brand-gold"
+            className="font-heading text-sm font-medium uppercase tracking-widest text-white"
           >
             {SITE.tagline}
           </motion.p>
@@ -110,7 +95,7 @@ export function HeroSection() {
                     ease: "easeInOut",
                   }
             }
-            className="glass-card gold-glow rounded-2xl p-2"
+            className="glass-card mono-glow rounded-2xl p-2"
           >
             <Image
               src={PUBLIC_ASSETS.dashboardMockup}

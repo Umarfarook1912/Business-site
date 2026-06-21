@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import { GOOGLE_FONTS, PUBLIC_ASSETS, SITE } from "@/lib/constants";
+import { Header } from "@/components/common/Header";
+import { GlobalBackground } from "@/components/common/GlobalBackground";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -39,7 +41,11 @@ export default function RootLayout({
         />
         <link rel="stylesheet" href={GOOGLE_FONTS.stylesheet} />
       </head>
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="min-h-full flex flex-col bg-brand-bg-primary text-brand-text-primary antialiased relative overflow-x-hidden">
+        <GlobalBackground />
+        <Header />
+        <div className="flex-1 flex flex-col relative z-10">{children}</div>
+      </body>
     </html>
   );
 }

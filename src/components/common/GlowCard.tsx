@@ -5,7 +5,7 @@ export function GlowCard({ children, className }: GlowCardProps) {
   return (
     <div
       className={cn(
-        "glass-card gold-border-gradient gold-glow-hover rounded-xl p-6",
+        "glass-card mono-border-gradient mono-glow-hover rounded-xl p-6",
         className
       )}
     >
