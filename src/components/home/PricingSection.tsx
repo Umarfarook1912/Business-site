@@ -51,8 +51,8 @@ export function PricingSection() {
     <section id={ANCHOR_IDS.pricing} className="bg-transparent px-6 py-24 relative overflow-hidden">
       <div className="mx-auto max-w-7xl relative z-10">
         <SectionHeader
-          title="Transparent Pricing"
-          subtitle="Explore custom pricing plans structured for startups, high-growth businesses, and enterprise architectures."
+          title="Pricing Built Around You"
+          subtitle="We don't believe in one-size-fits-all pricing. Every project gets a tailored quote built around your scope, your goals, and your budget — without compromising on the top-tier quality we deliver every time."
         />
 
         {/* Tabs Control */}
@@ -80,7 +80,7 @@ export function PricingSection() {
           </div>
 
           <p className="text-center text-xs text-neutral-500 max-w-lg leading-relaxed">
-            * Note: Deployment setup and direct cloud infrastructure costs (AWS, Vercel, VPS, Domain, etc.) are billed separately based on actual service provider usage.
+            * Every quote is customized after understanding your exact requirements — so you only pay for what your project truly needs.
           </p>
         </div>
 
@@ -112,12 +112,9 @@ export function PricingSection() {
                 <div>
                   <h3 className="font-heading text-lg font-bold text-white mb-2">{plan.name}</h3>
                   <p className="font-sans text-xs text-neutral-400 mb-6 min-h-[32px]">{plan.description}</p>
-                  
+
                   <div className="flex items-baseline gap-1 mb-8">
-                    <span className="font-heading text-4xl font-extrabold text-white">{plan.price}</span>
-                    {plan.period && (
-                      <span className="font-sans text-xs text-neutral-400">/{plan.period}</span>
-                    )}
+                    <span className="font-heading text-2xl font-extrabold text-white">{plan.tagline}</span>
                   </div>
 
                   <ul className="space-y-4 mb-8">
@@ -132,7 +129,7 @@ export function PricingSection() {
 
                 <div className="pt-4">
                   <GoldButton
-                    href={`https://api.whatsapp.com/send/?phone=7871694931&text=Hi%2C%20I%20am%20interested%20in%20the%20${encodeURIComponent(PRICING_TABS[activeTab])}%20-${encodeURIComponent(plan.name)}%20plan.`}
+                    href={`https://api.whatsapp.com/send/?phone=7871694931&text=Hi%2C%20I%20am%20interested%20in%20the%20${encodeURIComponent(PRICING_TABS[activeTab])}%20-${encodeURIComponent(plan.name)}%20plan.%20Please%20share%20a%20custom%20quote.`}
                     variant={plan.isPopular ? "primary" : "ghost"}
                     className="w-full text-center"
                   >
@@ -143,6 +140,21 @@ export function PricingSection() {
             ))}
           </motion.div>
         </AnimatePresence>
+
+        {/* Quality assurance strip */}
+        <div className="mt-16 text-center max-w-3xl mx-auto">
+          <p className="font-sans text-sm text-neutral-400 leading-relaxed">
+            We match every project to the quality benchmark of top-tier studios — clean architecture, modern UI/UX, and reliable delivery — at a price negotiated to fit your business, not a fixed template.
+          </p>
+          <div className="mt-6">
+            <GoldButton
+              href="https://api.whatsapp.com/send/?phone=7871694931&text=Hi%2C%20I%27d%20like%20to%20discuss%20a%20custom%20quote%20for%20my%20project."
+              variant="primary"
+            >
+              Talk to Us About Your Project
+            </GoldButton>
+          </div>
+        </div>
       </div>
     </section>
   );

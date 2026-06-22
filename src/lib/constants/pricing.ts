@@ -7,8 +7,7 @@ export const PRICING_TABS = {
 export interface PricingPlan {
   id: string;
   name: string;
-  price: string;
-  period?: string;
+  tagline: string;
   description: string;
   features: string[];
   ctaText: string;
@@ -19,8 +18,7 @@ export const WEB_PLANS: PricingPlan[] = [
   {
     id: "web-basic",
     name: "Startup Web",
-    price: "₹15,000",
-    period: "one-time",
+    tagline: "Custom Quote",
     description: "Ideal for small businesses needing a clean, professional online presence.",
     features: [
       "5-Page Responsive Web Design",
@@ -30,13 +28,12 @@ export const WEB_PLANS: PricingPlan[] = [
       "Basic On-Page SEO Setup",
       "1 Month Free Support & Edits",
     ],
-    ctaText: "Get Started",
+    ctaText: "Request a Quote",
   },
   {
     id: "web-standard",
     name: "Business Suite",
-    price: "₹45,000",
-    period: "one-time",
+    tagline: "Custom Quote",
     description: "Great for growing companies wanting interactive features or e-commerce.",
     features: [
       "Up to 10 Custom Web Pages",
@@ -46,14 +43,13 @@ export const WEB_PLANS: PricingPlan[] = [
       "CRM & WhatsApp API Integration",
       "3 Months Premium Support",
     ],
-    ctaText: "Build Business Suite",
+    ctaText: "Request a Quote",
     isPopular: true,
   },
   {
     id: "web-premium",
     name: "Enterprise Web",
-    price: "₹95,000",
-    period: "one-time",
+    tagline: "Custom Quote",
     description: "Designed for high-performance SaaS, complex databases, or custom AI integrations.",
     features: [
       "Unlimited Pages / Tailored Architecture",
@@ -63,7 +59,7 @@ export const WEB_PLANS: PricingPlan[] = [
       "Local & Global SEO Rank Strategy",
       "6 Months Dedicated Priority Support",
     ],
-    ctaText: "Go Enterprise",
+    ctaText: "Request a Quote",
   },
 ];
 
@@ -71,8 +67,7 @@ export const MOBILE_PLANS: PricingPlan[] = [
   {
     id: "mobile-basic",
     name: "MVP Mobile",
-    price: "₹25,000",
-    period: "one-time",
+    tagline: "Custom Quote",
     description: "A fast, cost-effective prototype app for test markets or startups.",
     features: [
       "Single-Platform App (Android or iOS)",
@@ -82,13 +77,12 @@ export const MOBILE_PLANS: PricingPlan[] = [
       "Essential Backend/API Syncing",
       "1 Month Launch Support",
     ],
-    ctaText: "Build MVP",
+    ctaText: "Request a Quote",
   },
   {
     id: "mobile-standard",
     name: "Growth Mobile",
-    price: "₹65,000",
-    period: "one-time",
+    tagline: "Custom Quote",
     description: "Full companion mobile app optimized for growth and user retention.",
     features: [
       "Dual-Platform (Android & iOS)",
@@ -98,14 +92,13 @@ export const MOBILE_PLANS: PricingPlan[] = [
       "Push Notifications System",
       "3 Months Dedicated Maintenance",
     ],
-    ctaText: "Build Growth Mobile",
+    ctaText: "Request a Quote",
     isPopular: true,
   },
   {
     id: "mobile-premium",
     name: "Enterprise Mobile",
-    price: "₹1,25,000",
-    period: "one-time",
+    tagline: "Custom Quote",
     description: "Complex, offline-first applications with real-time operations.",
     features: [
       "Custom Multiplatform Flutter App",
@@ -115,7 +108,7 @@ export const MOBILE_PLANS: PricingPlan[] = [
       "Advanced Animated Transitions",
       "6 Months Priority Maintenance & Updates",
     ],
-    ctaText: "Go Enterprise Mobile",
+    ctaText: "Request a Quote",
   },
 ];
 
@@ -123,8 +116,7 @@ export const HOSTING_SEO_PLANS: PricingPlan[] = [
   {
     id: "host-basic",
     name: "Standard Hosting",
-    price: "₹2,500",
-    period: "month",
+    tagline: "Custom Quote",
     description: "Essential hosting infrastructure and basic visibility audits.",
     features: [
       "Managed Cloud Hosting (Vercel/VPS)",
@@ -134,13 +126,12 @@ export const HOSTING_SEO_PLANS: PricingPlan[] = [
       "Security Monitoring & DDoS Protection",
       "Email Ticket Support",
     ],
-    ctaText: "Select Basic Plan",
+    ctaText: "Request a Quote",
   },
   {
     id: "host-standard",
     name: "Advanced Cloud & SEO",
-    price: "₹7,500",
-    period: "month",
+    tagline: "Custom Quote",
     description: "Premium performance setup with actively optimized SEO strategies.",
     features: [
       "High-Performance Scalable VPS Hosting",
@@ -150,14 +141,13 @@ export const HOSTING_SEO_PLANS: PricingPlan[] = [
       "10 Target Keywords Tracking",
       "Monthly Analytics & Audits Report",
     ],
-    ctaText: "Select Advanced Plan",
+    ctaText: "Request a Quote",
     isPopular: true,
   },
   {
     id: "host-premium",
     name: "Ultimate Premium Plan",
-    price: "₹15,000",
-    period: "month",
+    tagline: "Custom Quote",
     description: "Maximum bandwidth speed infrastructure and dedicated rank campaigns.",
     features: [
       "Auto-Scaling Server Cluster Setup",
@@ -167,6 +157,6 @@ export const HOSTING_SEO_PLANS: PricingPlan[] = [
       "Competitor SEO Analysis & Content Advisory",
       "24/7 Priority Phone & WhatsApp Support",
     ],
-    ctaText: "Select Ultimate Plan",
+    ctaText: "Request a Quote",
   },
 ];
