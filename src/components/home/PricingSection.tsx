@@ -51,12 +51,12 @@ export function PricingSection() {
     <section id={ANCHOR_IDS.pricing} className="bg-transparent px-6 py-24 relative overflow-hidden">
       <div className="mx-auto max-w-7xl relative z-10">
         <SectionHeader
-          title="Pricing Built Around You"
-          subtitle="We don't believe in one-size-fits-all pricing. Every project gets a tailored quote built around your scope, your goals, and your budget — without compromising on the top-tier quality we deliver every time."
+          title="Transparent Pricing"
+          subtitle="From initial strategy to final deployment, choose a plan that fits your execution speed."
         />
 
         {/* Tabs Control */}
-        <div className="flex flex-col items-center gap-4 mb-12">
+        <div className="flex flex-col items-center gap-4 mb-8">
           <div className="flex bg-neutral-900/60 p-1.5 rounded-full border border-neutral-800">
             {(Object.keys(PRICING_TABS) as Array<keyof typeof PRICING_TABS>).map((tabKey) => (
               <button
@@ -82,6 +82,17 @@ export function PricingSection() {
           <p className="text-center text-xs text-neutral-500 max-w-lg leading-relaxed">
             * Every quote is customized after understanding your exact requirements — so you only pay for what your project truly needs.
           </p>
+        </div>
+
+        {/* Architectural Discovery Consultation Badge */}
+        <div className="flex justify-center mb-12">
+          <div className="inline-flex items-center gap-2.5 px-4 py-2 rounded-full bg-neutral-900/40 border border-white/10 text-xs sm:text-sm text-neutral-300 backdrop-blur-md shadow-md">
+            <span className="relative flex h-2 w-2">
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-white opacity-75"></span>
+              <span className="relative inline-flex rounded-full h-2 w-2 bg-white"></span>
+            </span>
+            All plans include a dedicated, free architectural discovery consultation.
+          </div>
         </div>
 
         {/* Pricing Cards Grid */}

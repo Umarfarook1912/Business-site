@@ -14,21 +14,29 @@ export function GoldButton({
   href,
   variant = "primary",
   className,
+  onClick,
+  type = "button",
+  disabled,
 }: GoldButtonProps) {
   const resolvedVariant = variant ?? "primary";
   const classes = cn(
-    "inline-flex items-center justify-center rounded-lg px-6 py-3 text-sm font-semibold transition-all duration-300",
+    "inline-flex items-center justify-center rounded-lg px-6 py-3 text-sm font-semibold transition-all duration-300 cursor-pointer",
     variantClasses[resolvedVariant],
+    disabled && "opacity-50 pointer-events-none cursor-not-allowed",
     className
   );
 
   if (href) {
     return (
-      <Link href={href} className={classes}>
+      <Link href={href} onClick={onClick} className={classes}>
         {children}
       </Link>
     );
   }
 
-  return <button type="button" className={classes}>{children}</button>;
+  return (
+    <button type={type} onClick={onClick} className={classes} disabled={disabled}>
+      {children}
+    </button>
+  );
 }

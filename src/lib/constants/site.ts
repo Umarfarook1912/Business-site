@@ -1,7 +1,7 @@
 export const SITE = {
   name: "Growza",
-  tagline: "Building Digital Growth",
-  title: "Growza | Premium Digital Solutions",
+  tagline: "Strategic Software Consultation & Development",
+  title: "Growza | Expert Software Solutions & Consultation",
   description:
     "We build high-performance websites, custom web applications, and business automation systems that help companies scale faster.",
   url: "https://github.com/Umarfarook1912",

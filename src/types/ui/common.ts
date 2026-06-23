@@ -10,6 +10,9 @@ export type GoldButtonProps = {
   href?: string;
   variant?: "primary" | "ghost";
   className?: string;
+  onClick?: (e: React.MouseEvent<HTMLButtonElement | HTMLAnchorElement>) => void;
+  type?: "button" | "submit" | "reset";
+  disabled?: boolean;
 };
 
 export type SectionHeaderProps = {

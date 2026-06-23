@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { motion, useReducedMotion } from "framer-motion";
 import { GoldButton } from "@/components/common/GoldButton";
+import { useConsultation } from "@/components/common/ConsultationProvider";
 import {
   ANIMATION_DURATION,
   ANIMATION_EASE,
@@ -36,6 +37,7 @@ const itemVariants = {
 
 export function HeroSection() {
   const prefersReducedMotion = useReducedMotion();
+  const { openModal } = useConsultation();
 
   return (
     <section className="relative flex min-h-screen items-center overflow-hidden bg-transparent">
@@ -65,7 +67,7 @@ export function HeroSection() {
             variants={itemVariants}
             className="flex flex-col gap-4 sm:flex-row"
           >
-            <GoldButton href={ROUTES.consultation} variant="primary">
+            <GoldButton onClick={openModal} variant="primary">
               {HOME_HERO.primaryCta}
             </GoldButton>
             <GoldButton href={ROUTES.work} variant="ghost">

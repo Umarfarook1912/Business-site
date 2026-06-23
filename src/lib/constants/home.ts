@@ -2,9 +2,9 @@ import { ANCHOR_IDS } from "./routes";
 import type { PortfolioItem } from "@/types";
 
 export const HOME_HERO = {
-  headline: "Premium Digital Solutions",
+  headline: "Expert Software Solutions. Custom-Built for Your Growth.",
   subheadline:
-    "Full Stack Developer specializing in building high-performance websites, custom web applications, and business automation systems.",
+    "Get a roadmap to scale your business. We provide expert technical consultation and end-to-end software development to turn your vision into reality.",
   primaryCta: "Get Free Consultation",
   secondaryCta: "View Our Work",
 } as const;
