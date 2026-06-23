@@ -11,7 +11,7 @@ const NAV_ITEMS = [
   { label: "About Us", href: ROUTES.whyChoose },
   { label: "Services", href: ROUTES.services },
   { label: "Portfolio", href: ROUTES.portfolio },
-  { label: "Pricing", href: ROUTES.pricing },
+  { label: "Consultation", href: ROUTES.consultation },
   { label: "Contact Us", href: ROUTES.contact },
 ];
 

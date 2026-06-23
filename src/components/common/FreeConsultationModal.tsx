@@ -53,22 +53,34 @@ export function FreeConsultationModal() {
 
     setIsSubmitting(true);
 
-    // Simulate API delay
-    await new Promise((resolve) => setTimeout(resolve, 800));
+    try {
+      const response = await fetch("/api/consultation", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
 
-    // Store/Console-log the captured data object structure
-    console.log("Captured Consultation Request Lead Data:", formData);
-
-    setIsSubmitting(false);
-    setIsSubmitted(true);
-
-    // Clean up form
-    setFormData({
-      name: "",
-      email: "",
-      phone: "",
-      overview: "",
-    });
+      if (response.ok) {
+        setIsSubmitted(true);
+        // Clean up form
+        setFormData({
+          name: "",
+          email: "",
+          phone: "",
+          overview: "",
+        });
+      } else {
+        const data = await response.json();
+        alert(data.error || "Failed to submit request. Please try again.");
+      }
+    } catch (err) {
+      console.error(err);
+      alert("Something went wrong. Please check your connection and try again.");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const handleClose = () => {

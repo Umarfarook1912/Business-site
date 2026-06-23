@@ -55,7 +55,7 @@ export const HOME_SERVICES = [
     id: "automation",
     title: "Business Automation & AI",
     description:
-      "Intelligent automation systems, WhatsApp API integrations, and OpenCV computer vision systems.",
+      "Intelligent automation systems, WhatsApp API integrations, and custom workflow solutions.",
     icon: "Zap",
   },
 ] as const;
@@ -71,20 +71,11 @@ export const HOME_INDUSTRIES = [
   "E-commerce",
   "Education",
   "Travel & Blogs",
-  "AI & Computer Vision",
   "Software Tools",
   "Real Estate",
 ] as const;
 
 export const HOME_PORTFOLIO: readonly PortfolioItem[] = [
-  {
-    id: "stublab",
-    title: "StubLab (API Mock Server)",
-    category: "Web Application",
-    description:
-      "A mock server allowing users to create and test APIs without a backend. Implemented JWT-based authentication and MFA security.",
-    projectUrl: "https://stublab.in",
-  },
   {
     id: "softzcart",
     title: "SoftZCart Platform",
@@ -92,46 +83,5 @@ export const HOME_PORTFOLIO: readonly PortfolioItem[] = [
     description:
       "MERN stack software and e-commerce website hosted on VPS, featuring complete product management and checkout flows.",
     projectUrl: "https://softzcart.com/",
-  },
-  {
-    id: "document-scanner",
-    title: "Document Scanner",
-    category: "AI & Automation",
-    description:
-      "Computer vision application to convert images to PDF using OpenCV, corner detection, and perspective transformations.",
-    githubUrl: "https://github.com/Umarfarook1912/Document-Scanner",
-  },
-  {
-    id: "vinculo",
-    title: "Vinculo E-commerce",
-    category: "E-commerce",
-    description:
-      "Garment e-commerce platform built with the MERN stack (MongoDB, Express, React, Node).",
-    projectUrl: "https://vinculo-mgdn.vercel.app/",
-  },
-  {
-    id: "giftiebags",
-    title: "GiftieBags E-commerce",
-    category: "Websites",
-    description:
-      "Dynamic e-commerce website for bag purchases featuring customized product listings and responsive layouts.",
-    projectUrl: "https://giftiebags.vercel.app/",
-  },
-  {
-    id: "college-website",
-    title: "SSMIET College Website",
-    category: "Websites",
-    description:
-      "Official website portal built for SSM Institute of Engineering and Technology using modern responsive layouts.",
-    projectUrl: "https://ssmiet.ac.in/",
-  },
-  {
-    id: "travel-blog",
-    title: "Personal Travel Blog",
-    category: "Websites",
-    description:
-      "A travel blog showcasing travel tips, photos, and posts, built as a responsive static web application hosted on IBM Cloud.",
-    githubUrl: "https://github.com/Umarfarook1912/Personal-Blog-on-IBM-Cloud-Static-Web-Apps",
-    projectUrl: "https://umarfarook1912.github.io/Personal-Blog-on-IBM-Cloud-Static-Web-Apps/",
   },
 ] as const;
