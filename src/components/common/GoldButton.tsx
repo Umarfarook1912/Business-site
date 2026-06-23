@@ -35,7 +35,7 @@ export function GoldButton({
   }
 
   return (
-    <button type={type} onClick={onClick} className={classes} disabled={disabled}>
+    <button type={type} onClick={onClick} className={classes} disabled={disabled} suppressHydrationWarning>
       {children}
     </button>
   );
