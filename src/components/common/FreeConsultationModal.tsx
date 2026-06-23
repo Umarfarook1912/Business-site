@@ -147,6 +147,7 @@ export function FreeConsultationModal() {
                         errors.name ? "border-red-500/50 focus:border-red-500" : "border-white/10 focus:border-white/30"
                       } rounded-lg px-4 py-2.5 text-sm text-white focus:outline-none focus:ring-1 focus:ring-white/20 transition-all duration-300`}
                       placeholder="e.g. John Doe"
+                      suppressHydrationWarning
                     />
                     {errors.name && (
                       <span className="text-xs text-red-500 mt-1 block">{errors.name}</span>
@@ -168,6 +169,7 @@ export function FreeConsultationModal() {
                         errors.email ? "border-red-500/50 focus:border-red-500" : "border-white/10 focus:border-white/30"
                       } rounded-lg px-4 py-2.5 text-sm text-white focus:outline-none focus:ring-1 focus:ring-white/20 transition-all duration-300`}
                       placeholder="john@company.com"
+                      suppressHydrationWarning
                     />
                     {errors.email && (
                       <span className="text-xs text-red-500 mt-1 block">{errors.email}</span>
@@ -189,6 +191,7 @@ export function FreeConsultationModal() {
                         errors.phone ? "border-red-500/50 focus:border-red-500" : "border-white/10 focus:border-white/30"
                       } rounded-lg px-4 py-2.5 text-sm text-white focus:outline-none focus:ring-1 focus:ring-white/20 transition-all duration-300`}
                       placeholder="+1 (555) 000-0000 or +91 ..."
+                      suppressHydrationWarning
                     />
                     {errors.phone && (
                       <span className="text-xs text-red-500 mt-1 block">{errors.phone}</span>
@@ -208,6 +211,7 @@ export function FreeConsultationModal() {
                       onChange={handleChange}
                       className="w-full bg-neutral-900 border border-white/10 focus:border-white/30 rounded-lg px-4 py-2.5 text-sm text-white focus:outline-none focus:ring-1 focus:ring-white/20 transition-all duration-300 resize-none animate-none"
                       placeholder="Briefly describe the software solution or problem you want to consult with us about..."
+                      suppressHydrationWarning
                     />
                   </div>
 
