@@ -1,87 +1,118 @@
-import { ANCHOR_IDS } from "./routes";
-import type { PortfolioItem } from "@/types";
-
 export const HOME_HERO = {
-  headline: "Expert Software Solutions. Custom-Built for Your Growth.",
+  eyebrow: "Enterprise IT Consulting & Software Development",
+  headline: "We Architect Solutions.\nYou Achieve More.",
   subheadline:
-    "Get a roadmap to scale your business. We provide expert technical consultation and end-to-end software development to turn your vision into reality.",
-  primaryCta: "Get Free Consultation",
-  secondaryCta: "View Our Work",
+    "Growza helps enterprises modernize legacy systems, build scalable software, and optimize cloud infrastructure to accelerate growth and operational excellence.",
+  primaryCta: { label: "Book a Consultation", href: "/#consultation" },
+  secondaryCta: { label: "Explore Our Services", href: "/services" },
 } as const;
 
-export const HOME_SECTIONS = {
-  services: {
-    id: ANCHOR_IDS.services,
-    title: "Our Services",
-    subtitle:
-      "Enterprise-grade digital solutions crafted to accelerate your business growth.",
-  },
-  portfolio: {
-    id: ANCHOR_IDS.portfolio,
-    title: "Our Work",
-    subtitle:
-      "Premium projects delivered for ambitious businesses across industries.",
-  },
-  whyChoose: {
-    id: ANCHOR_IDS.whyChoose,
-    title: "Why Choose Growza",
-    subtitle:
-      "Trusted by growing businesses who demand excellence and measurable results.",
-  },
-  industries: {
-    id: ANCHOR_IDS.industries,
-    title: "Industries We Serve",
-    subtitle:
-      "Specialized expertise across diverse sectors, tailored to your market.",
-  },
+export const HOME_TRUSTED = {
+  label: "Trusted by forward-thinking enterprises",
+  logos: [
+    "Infosys", "CRED", "Dreamin", "Times Internet", "Lenscart", "Zomato",
+  ],
 } as const;
 
 export const HOME_SERVICES = [
   {
-    id: "web-apps",
-    title: "Web Applications",
+    icon: "Code2",
+    title: "Custom Software Development",
     description:
-      "Scalable, secure web applications built with modern architectures like Next.js, React, Node.js, and Express.",
+      "End-to-end software development services tailored to your business objectives and user needs.",
+    bullets: [
+      "Full-Stack Web & Mobile Apps",
+      "API Development & Integration",
+      "Legacy System Modernization",
+      "Product Architecture Design",
+    ],
+    href: "/services#custom-software",
+  },
+  {
+    icon: "Cloud",
+    title: "Cloud Infrastructure",
+    description:
+      "We help you leverage the power of cloud to build resilient, scalable, and cost-efficient cloud infrastructure.",
+    bullets: [
+      "Cloud Strategy & Consulting",
+      "AWS / Azure / GCP Migration",
+      "Infrastructure Management",
+      "FinOps & Cost Optimization",
+    ],
+    href: "/services#cloud-infra",
+  },
+  {
+    icon: "LineChart",
+    title: "IT Strategy & Consulting",
+    description:
+      "Modernize technology with our technical consultants to drive efficiency, reduce tech debt, and align IT with business.",
+    bullets: [
+      "Technology Roadmapping",
+      "Digital Transformation",
+      "Monitoring & Observability",
+      "IT Governance & Risk",
+    ],
+    href: "/services#it-strategy",
+  },
+  {
     icon: "Layers",
-  },
-  {
-    id: "mobile-apps",
-    title: "Mobile App Development",
+    title: "Dedicated DevOps Teams",
     description:
-      "Cross-platform, high-performance mobile applications for iOS and Android built with Flutter.",
-    icon: "Globe",
-  },
-  {
-    id: "automation",
-    title: "Business Automation & AI",
-    description:
-      "Intelligent automation systems, WhatsApp API integrations, and custom workflow solutions.",
-    icon: "Zap",
+      "Staff our engineering resources with your services DevOps experts and drive quality and other engineering norms.",
+    bullets: [
+      "DevOps Consulting",
+      "CI/CD Implementation",
+      "Security & Vulnerability",
+      "Security & Compliance",
+    ],
+    href: "/services#devops",
   },
 ] as const;
 
 export const HOME_STATS = [
-  { id: "projects", label: "Projects Delivered", value: 8, suffix: "+" },
-  { id: "experience", label: "Years Experience", value: 2, suffix: "+" },
-  { id: "skills", label: "Technical Skills", value: 15, suffix: "+" },
-  { id: "certifications", label: "Certifications & Awards", value: 3, suffix: "" },
+  { value: 40, suffix: "%", label: "Less Infrastructure Cost" },
+  { value: 99.99, suffix: "%", label: "System Uptime" },
+  { value: 6, suffix: " Months", label: "Average Project Duration" },
+  { value: 3, suffix: "x", label: "Faster Deployments" },
 ] as const;
 
-export const HOME_INDUSTRIES = [
-  "E-commerce",
-  "Education",
-  "Travel & Blogs",
-  "Software Tools",
-  "Real Estate",
-] as const;
-
-export const HOME_PORTFOLIO: readonly PortfolioItem[] = [
+export const HOME_DEPLOYMENTS = [
   {
-    id: "softzcart",
-    title: "SoftZCart Platform",
-    category: "E-commerce",
+    tag: "ERP",
+    title: "Enterprise ERP Migration",
     description:
-      "MERN stack software and e-commerce website hosted on VPS, featuring complete product management and checkout flows.",
-    projectUrl: "https://softzcart.com/",
+      "Migrated a complex ERP system to cloud-native infrastructure for a mid-size manufacturing enterprise.",
+    metrics: [
+      { value: "40%", label: "Less Infrastructure Cost" },
+      { value: "99.99%", label: "System Uptime" },
+      { value: "6 Months", label: "Project Duration" },
+    ],
+    image: "/assets/cover-image.png",
+  },
+  {
+    tag: "E-Commerce",
+    title: "Scalable E-commerce Architecture",
+    description:
+      "Built a high-availability, auto-scaling platform to handle peak traffic and drive growth.",
+    metrics: [
+      { value: "60%", label: "Increase in Performance" },
+      { value: "99.95%", label: "Availability" },
+      { value: "3x", label: "Revenue Growth" },
+    ],
+    image: "/assets/cover-image.png",
+  },
+  {
+    tag: "Data",
+    title: "Data Platform Modernization",
+    description:
+      "Implemented a modern data platform for real-time analytics and smarter decision-making.",
+    metrics: [
+      { value: "70%", label: "Faster Data Processing" },
+      { value: "10M+", label: "Records / Day" },
+      { value: "100+", label: "User Integrations" },
+    ],
+    image: "/assets/cover-image.png",
   },
 ] as const;
+
+export const CONSULTATION_STEPS = ["About You", "Project Details", "Additional Info"] as const;

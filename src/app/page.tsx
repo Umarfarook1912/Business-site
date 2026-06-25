@@ -1,21 +1,17 @@
-import { FooterSection } from "@/components/home/FooterSection";
-import { HeroSection } from "@/components/home/HeroSection";
-import { IndustriesSection } from "@/components/home/IndustriesSection";
-import { PortfolioSection } from "@/components/home/PortfolioSection";
-import { ServicesSection } from "@/components/home/ServicesSection";
-import { WhyChooseSection } from "@/components/home/WhyChooseSection";
-import { ConsultationSection } from "@/components/home/ConsultationSection";
+import { HomeHero } from "@/components/home/HomeHero";
+import { HomeServicesGrid } from "@/components/home/HomeServicesGrid";
+import { HomeTechStrip } from "@/components/home/HomeTechStrip";
+import { HomeDeployments } from "@/components/home/HomeDeployments";
+import { HomeConsultationForm } from "@/components/home/HomeConsultationForm";
 
 export default function HomePage() {
   return (
-    <main className="flex flex-1 flex-col">
-      <HeroSection />
-      <ServicesSection />
-      <PortfolioSection />
-      <WhyChooseSection />
-      <ConsultationSection />
-      <IndustriesSection />
-      <FooterSection />
-    </main>
+    <>
+      <HomeHero />
+      <HomeServicesGrid />
+      <HomeTechStrip />
+      <HomeDeployments />
+      <HomeConsultationForm />
+    </>
   );
 }

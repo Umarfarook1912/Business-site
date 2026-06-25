@@ -1,8 +1,7 @@
 import type { Metadata } from "next";
 import { GOOGLE_FONTS, PUBLIC_ASSETS, SITE } from "@/lib/constants";
-import { Header } from "@/components/common/Header";
-import { GlobalBackground } from "@/components/common/GlobalBackground";
-import { ConsultationProvider } from "@/components/common/ConsultationProvider";
+import { SiteHeader } from "@/components/common/SiteHeader";
+import { SiteFooter } from "@/components/common/SiteFooter";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -32,7 +31,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="dark h-full antialiased" suppressHydrationWarning>
+    <html lang="en" className="h-full antialiased" suppressHydrationWarning>
       <head>
         <link rel="preconnect" href={GOOGLE_FONTS.preconnect} />
         <link
@@ -42,12 +41,10 @@ export default function RootLayout({
         />
         <link rel="stylesheet" href={GOOGLE_FONTS.stylesheet} />
       </head>
-      <body className="min-h-full flex flex-col bg-brand-bg-primary text-brand-text-primary antialiased relative overflow-x-hidden">
-        <ConsultationProvider>
-          <GlobalBackground />
-          <Header />
-          <div className="flex-1 flex flex-col relative z-10">{children}</div>
-        </ConsultationProvider>
+      <body className="min-h-full flex flex-col bg-background text-foreground antialiased">
+        <SiteHeader />
+        <main className="flex-1 flex flex-col">{children}</main>
+        <SiteFooter />
       </body>
     </html>
   );

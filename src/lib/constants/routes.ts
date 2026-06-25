@@ -1,18 +1,15 @@
 export const ROUTES = {
   home: "/",
-  consultation: "#consultation",
-  work: "/#portfolio",
-  portfolio: "#portfolio",
-  services: "#services",
-  whyChoose: "#why-choose",
-  contact: "#contact",
+  services: "/services",
+  techStack: "/tech-stack",
+  about: "/about",
+  caseStudies: "/case-studies",
+  consultation: "/#consultation",
 } as const;
 
-export const ANCHOR_IDS = {
-  portfolio: "portfolio",
-  services: "services",
-  industries: "industries",
-  whyChoose: "why-choose",
-  consultation: "consultation",
-  contact: "contact",
-} as const;
+export const NAV_LINKS = [
+  { label: "Services", href: ROUTES.services },
+  { label: "Case Studies", href: ROUTES.caseStudies },
+  { label: "Tech Stack", href: ROUTES.techStack },
+  { label: "About Us", href: ROUTES.about },
+] as const;
