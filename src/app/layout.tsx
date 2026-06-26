@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { GOOGLE_FONTS, PUBLIC_ASSETS, SITE } from "@/lib/constants";
-import { SiteHeader } from "@/components/common/SiteHeader";
+import { Analytics } from "@/components/common/Analytics";
+import { SiteHeaderClient } from "@/components/common/SiteHeaderClient";
 import { SiteFooter } from "@/components/common/SiteFooter";
 import "./globals.css";
 
@@ -41,8 +42,9 @@ export default function RootLayout({
         />
         <link rel="stylesheet" href={GOOGLE_FONTS.stylesheet} />
       </head>
-      <body className="min-h-full flex flex-col bg-background text-foreground antialiased">
-        <SiteHeader />
+      <body className="min-h-full flex flex-col bg-background text-foreground antialiased" suppressHydrationWarning>
+        <Analytics />
+        <SiteHeaderClient />
         <main className="flex-1 flex flex-col">{children}</main>
         <SiteFooter />
       </body>

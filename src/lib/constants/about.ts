@@ -1,45 +1,53 @@
+import { COMPANY, CODING_PRINCIPLES } from "./site";
+
 export const ABOUT_HERO = {
-  eyebrow: "Who We Are",
-  headline: "An Engineering Team That Thinks Like a Business Partner.",
+  eyebrow: "About Growza",
+  headline: "A Development Team Focused on Quality and Delivery.",
   subheadline:
-    "Growza is an enterprise IT consulting and software development firm founded on a simple belief: the best technology outcomes happen when engineers deeply understand business context.",
+    "We are an IT consulting and software development team helping businesses build websites, mobile apps, and integrations with practical technology choices and agile delivery.",
 } as const;
 
 export const ABOUT_STATS = [
-  { value: "10+", label: "Years of Experience" },
-  { value: "250+", label: "Projects Delivered" },
-  { value: "120+", label: "Happy Clients" },
-  { value: "98%", label: "Client Retention Rate" },
+  { value: "8+", label: "Projects Delivered" },
+  { value: "2+", label: "Years Experience" },
+  { value: "15+", label: "Technologies" },
+  { value: "3", label: "Certifications" },
 ] as const;
+
+export const ABOUT_VISION = COMPANY.vision;
+export const ABOUT_MISSION = COMPANY.mission;
 
 export const ABOUT_VALUES = [
   {
-    title: "Engineering Excellence",
+    title: "Agile Delivery",
     description:
-      "We hold ourselves to the same standards we'd hold any world-class engineering team — readable code, test coverage, observable systems, and zero-surprise deployments.",
+      "We work in sprints with regular demos and feedback so you see progress early and can adjust direction quickly.",
   },
   {
-    title: "Business Alignment",
+    title: "Clean Code Standards",
     description:
-      "Technology decisions are always made in the context of business outcomes. We ask \"why\" before we ask \"how\" and push back when the fastest path isn't the right one.",
+      "DRY principle, UNDOAT principle, files under 250 lines, global constants, and reusable components guide every project.",
   },
   {
-    title: "Radical Transparency",
+    title: "Right Technology Choices",
     description:
-      "You get full visibility into project velocity, blockers, and risks — before they become problems. No surprises, no scope creep by stealth.",
+      "We use the stacks we know best — React, Next.js, Node.js, Flutter, and more — chosen to fit your project, not hype.",
   },
   {
-    title: "Long-term Partnership",
+    title: "End-to-End Support",
     description:
-      "We are not here to bill hours and disappear. We measure our success by whether your systems are still running smoothly two years after we hand over the keys.",
+      "From consulting and development to hosting, SEO, DevOps, and integrations, we stay with you through launch and beyond.",
   },
 ] as const;
 
 export const ABOUT_EXPERTISE = [
-  "Full-Stack Application Development",
-  "Cloud Architecture & Migration",
-  "DevOps & Platform Engineering",
-  "Data Engineering & Analytics",
-  "Mobile Application Development",
-  "IT Strategy & Digital Transformation",
+  "IT & Consulting",
+  "Website Development",
+  "Mobile App Development",
+  "Hosting (Hostinger, GoDaddy, AWS)",
+  "SEO Optimization",
+  "DevOps & CI/CD",
+  "WhatsApp, Email & OTP Integrations",
 ] as const;
+
+export { CODING_PRINCIPLES };

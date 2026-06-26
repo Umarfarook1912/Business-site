@@ -3,13 +3,10 @@ export const ROUTES = {
   services: "/services",
   techStack: "/tech-stack",
   about: "/about",
-  caseStudies: "/case-studies",
   consultation: "/#consultation",
+  projects: "/#projects",
+  reviews: "/#reviews",
+  principles: "/#principles",
+  faq: "/#faq",
+  blog: "/blog",
 } as const;
-
-export const NAV_LINKS = [
-  { label: "Services", href: ROUTES.services },
-  { label: "Case Studies", href: ROUTES.caseStudies },
-  { label: "Tech Stack", href: ROUTES.techStack },
-  { label: "About Us", href: ROUTES.about },
-] as const;

@@ -1,161 +1,122 @@
+const AGILE_STEPS = [
+  { step: "Discover & Plan", detail: "Understand requirements, scope, and timelines in short planning sessions." },
+  { step: "Build in Sprints", detail: "Deliver working increments every sprint with clear demos and feedback." },
+  { step: "Review & Refine", detail: "Peer reviews, SonarQube checks, and reusable components keep quality high." },
+  { step: "Deploy & Support", detail: "Ship to Hostinger, GoDaddy, or AWS with monitoring and post-launch support." },
+] as const;
+
 export const SERVICES_HERO = {
-  eyebrow: "What We Do",
-  headline: "End-to-End Technology Services",
+  eyebrow: "What We Offer",
+  headline: "Services Built Around Your Business Needs",
   subheadline:
-    "From strategy and architecture to deployment and ongoing support — we deliver every layer of enterprise technology with precision and accountability.",
+    "From IT consulting and web development to hosting, SEO, DevOps, and integrations — we handle the full delivery cycle with agile practices.",
 } as const;
 
 export const SERVICES_LIST = [
   {
-    id: "custom-software",
+    id: "it-consulting",
     tag: "01",
-    title: "Custom Software Development",
-    headline: "Built for Your Business. Engineered to Scale.",
+    icon: "Briefcase",
+    title: "IT & Consulting",
+    headline: "Clear technical direction for your next move.",
     description:
-      "We design and develop high-performance, production-ready software that solves real business problems. Our teams bring deep expertise in full-stack engineering, system design, and modern software delivery practices.",
-    methodology: [
-      {
-        step: "Discovery & Architecture",
-        detail:
-          "We map your business requirements, existing systems, and user journeys to design a scalable architecture before writing a single line of code.",
-      },
-      {
-        step: "Agile Development Sprints",
-        detail:
-          "Two-week sprints with working demos. You have full visibility into velocity, blockers, and scope at every stage.",
-      },
-      {
-        step: "Code Review & Quality Gates",
-        detail:
-          "Every pull request is peer-reviewed. Static analysis, unit, integration, and end-to-end tests run in CI before any merge.",
-      },
-      {
-        step: "Deployment & Handover",
-        detail:
-          "We deploy to your preferred infrastructure with full documentation, runbooks, and a 90-day post-launch support window.",
-      },
-    ],
-    capabilities: [
-      "Full-Stack Web Applications",
-      "REST & GraphQL APIs",
-      "Microservices Architecture",
-      "Legacy System Modernization",
-      "Third-party API Integrations",
-      "Performance Optimization",
-    ],
+      "We help you choose the right stack, plan architecture, and align technology with business goals before development begins.",
+    methodology: AGILE_STEPS,
+    capabilities: ["Technology assessment", "Solution architecture", "Project planning", "Stack recommendations"],
   },
   {
-    id: "cloud-infra",
+    id: "website-development",
     tag: "02",
-    title: "Cloud Infrastructure",
-    headline: "Resilient, Cost-Efficient Cloud at Enterprise Scale.",
+    icon: "Globe",
+    title: "Website Development",
+    headline: "Fast, responsive websites that represent your brand.",
     description:
-      "We design, migrate, and operate cloud environments that are secure by default, observable at every layer, and optimized for cost. Whether you are lifting-and-shifting or going cloud-native, we manage the full lifecycle.",
-    methodology: [
-      {
-        step: "Cloud Readiness Assessment",
-        detail:
-          "Audit your current infrastructure for dependencies, security posture, and migration complexity before producing a phased roadmap.",
-      },
-      {
-        step: "Infrastructure as Code",
-        detail:
-          "All resources are provisioned via Terraform or Pulumi — version-controlled, peer-reviewed, and repeatable across environments.",
-      },
-      {
-        step: "Migration Execution",
-        detail:
-          "Zero-downtime migration using blue-green or canary strategies. Each workload is tested in staging before cutover.",
-      },
-      {
-        step: "Ongoing Operations & FinOps",
-        detail:
-          "Continuous monitoring, auto-scaling policies, and monthly FinOps reviews keep costs predictable and SLAs tight.",
-      },
-    ],
-    capabilities: [
-      "AWS / Azure / GCP Architecture",
-      "Kubernetes & Container Orchestration",
-      "Serverless & Edge Computing",
-      "Multi-Cloud & Hybrid Cloud",
-      "Cloud Security & Compliance",
-      "Cost Optimization (FinOps)",
-    ],
+      "We build marketing sites, dashboards, and web apps using React, Next.js, Vite, Astro, and TypeScript with clean, maintainable code.",
+    methodology: AGILE_STEPS,
+    capabilities: ["React & Next.js apps", "Vite & Astro sites", "Responsive UI", "API integration"],
   },
   {
-    id: "it-strategy",
+    id: "mobile-app-development",
     tag: "03",
-    title: "IT Strategy & Consulting",
-    headline: "Align Technology with Business Outcomes.",
+    icon: "Smartphone",
+    title: "Mobile App Development",
+    headline: "Cross-platform apps built for real users.",
     description:
-      "Our senior architects and technology strategists embed with your leadership team to build a coherent IT strategy — one that eliminates redundancy, reduces risk, and creates a clear execution roadmap.",
-    methodology: [
-      {
-        step: "Technology Audit",
-        detail:
-          "Comprehensive review of your current stack, vendor contracts, team structure, and technical debt to surface quick wins and long-term risks.",
-      },
-      {
-        step: "Roadmap Design",
-        detail:
-          "A prioritized, phased technology roadmap tied to your business milestones — not just a wish list of tools.",
-      },
-      {
-        step: "Vendor & Build Decisions",
-        detail:
-          "Objective analysis of build vs. buy, open-source vs. commercial, and in-house vs. outsourced for each capability.",
-      },
-      {
-        step: "Governance & Execution",
-        detail:
-          "We establish architecture review boards, engineering principles, and decision logs so the strategy survives beyond the engagement.",
-      },
-    ],
-    capabilities: [
-      "Technology Roadmapping",
-      "Digital Transformation Programs",
-      "Architecture Review Boards",
-      "IT Governance Frameworks",
-      "Vendor Selection & Management",
-      "OKR-Aligned Engineering Metrics",
-    ],
+      "Flutter and React Native apps with polished UX, reliable performance, and backend integration for iOS and Android.",
+    methodology: AGILE_STEPS,
+    capabilities: ["Flutter apps", "React Native apps", "App store readiness", "Backend connectivity"],
+  },
+  {
+    id: "hosting",
+    tag: "04",
+    icon: "Server",
+    title: "Hosting",
+    headline: "Reliable hosting setup and deployment.",
+    description:
+      "We configure and manage hosting on Hostinger, GoDaddy, and AWS so your applications stay online and performant.",
+    methodology: AGILE_STEPS,
+    capabilities: ["Hostinger setup", "GoDaddy deployment", "AWS cloud hosting", "Domain & SSL configuration"],
+  },
+  {
+    id: "seo-optimization",
+    tag: "05",
+    icon: "Search",
+    title: "SEO Optimization",
+    headline: "Help customers find you online.",
+    description:
+      "On-page SEO, performance tuning, and structured content improvements to improve search visibility and page speed.",
+    methodology: AGILE_STEPS,
+    capabilities: ["On-page SEO", "Meta & sitemap setup", "Performance optimization", "Analytics setup"],
   },
   {
     id: "devops",
-    tag: "04",
-    title: "Dedicated DevOps Teams",
-    headline: "Ship Faster. Break Nothing.",
+    tag: "06",
+    icon: "GitBranch",
+    title: "DevOps",
+    headline: "Automated pipelines and reliable releases.",
     description:
-      "We staff embedded DevOps engineers who own your delivery pipeline end-to-end — from code commit to production. Shorter cycle times, fewer incidents, and a culture of continuous improvement.",
-    methodology: [
-      {
-        step: "Pipeline Assessment",
-        detail:
-          "Benchmark your current DORA metrics (lead time, deployment frequency, MTTR, change failure rate) to set a performance baseline.",
-      },
-      {
-        step: "CI/CD Implementation",
-        detail:
-          "Design and implement automated build, test, and deploy pipelines using GitHub Actions, GitLab CI, or your preferred toolchain.",
-      },
-      {
-        step: "Observability Stack",
-        detail:
-          "Instrument your services with distributed tracing, structured logs, and SLO-based alerting so you find issues before users do.",
-      },
-      {
-        step: "Reliability Improvement Loop",
-        detail:
-          "Monthly reliability reviews, chaos engineering exercises, and runbook updates to progressively improve system resilience.",
-      },
-    ],
-    capabilities: [
-      "CI/CD Pipeline Design",
-      "Container & Kubernetes Operations",
-      "Observability & Alerting",
-      "Incident Response Playbooks",
-      "Security Scanning (SAST/DAST)",
-      "Site Reliability Engineering",
-    ],
+      "CI/CD with GitHub Actions and Jenkins, code quality with SonarQube, and analytics with PostHog for smoother delivery.",
+    methodology: AGILE_STEPS,
+    capabilities: ["GitHub Actions pipelines", "Jenkins automation", "SonarQube code quality", "PostHog analytics"],
+  },
+  {
+    id: "whatsapp-api",
+    tag: "07",
+    icon: "MessageCircle",
+    title: "WhatsApp API Integration",
+    headline: "Reach customers on WhatsApp at scale.",
+    description:
+      "Integrate WhatsApp Business API for notifications, support messages, and automated customer communication flows.",
+    methodology: AGILE_STEPS,
+    capabilities: ["WhatsApp Business API", "Automated messaging", "Webhook handling", "Template management"],
+  },
+  {
+    id: "email-notification",
+    tag: "08",
+    icon: "Mail",
+    title: "Email Notification",
+    headline: "Timely email alerts your users can trust.",
+    description:
+      "Transactional and notification emails for sign-ups, orders, password resets, and system alerts with reliable delivery.",
+    methodology: AGILE_STEPS,
+    capabilities: ["SMTP integration", "Transactional emails", "Template design", "Delivery monitoring"],
+  },
+  {
+    id: "mobile-otp",
+    tag: "09",
+    icon: "ShieldCheck",
+    title: "Mobile OTP Integration",
+    headline: "Secure phone-based verification.",
+    description:
+      "OTP-based login and verification flows for mobile apps and web platforms with secure token handling.",
+    methodology: AGILE_STEPS,
+    capabilities: ["SMS OTP delivery", "Login verification", "Rate limiting", "Secure token storage"],
   },
 ] as const;
+
+export const HOME_SERVICES = SERVICES_LIST.map((s) => ({
+  icon: s.icon,
+  title: s.title,
+  description: s.description,
+  href: `/services#${s.id}`,
+}));

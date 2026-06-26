@@ -1,11 +1,12 @@
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
-import { HOME_HERO } from "@/lib/constants";
+import { HOME_HERO, HOME_STATS } from "@/lib/constants";
+import { MotionSection } from "@/components/common/MotionSection";
+import { MotionStagger, MotionStaggerItem } from "@/components/common/MotionStagger";
 
 export function HomeHero() {
   return (
     <section className="bg-[#F8FAFC] relative overflow-hidden">
-      {/* Subtle grid pattern */}
       <div
         className="absolute inset-0 pointer-events-none"
         style={{
@@ -16,15 +17,15 @@ export function HomeHero() {
       />
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-24">
         <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
-          {/* Text */}
-          <div>
+          <MotionSection>
             <p className="section-label mb-4">{HOME_HERO.eyebrow}</p>
             <h1 className="text-[2.5rem] sm:text-5xl lg:text-[3.25rem] font-extrabold text-[#0F172A] leading-[1.12] tracking-tight">
-              Engineering Digital
-              <br />
-              Transformation That
-              <br />
-              <span className="text-[#0284C7]">Drives Real Results</span>
+              {HOME_HERO.headline.split("\n").map((line, i) => (
+                <span key={i}>
+                  {line}
+                  {i === 0 && <br />}
+                </span>
+              ))}
             </h1>
             <p className="mt-5 text-sm sm:text-base text-[#334155] leading-relaxed max-w-md">
               {HOME_HERO.subheadline}
@@ -39,38 +40,18 @@ export function HomeHero() {
                 <ArrowRight size={14} />
               </Link>
             </div>
-          </div>
+          </MotionSection>
 
-          {/* Image placeholder — styled like reference */}
-          <div className="relative rounded-2xl overflow-hidden border border-[#E2E8F0] shadow-xl bg-white">
-            <div className="aspect-[4/3] bg-gradient-to-br from-slate-100 via-slate-50 to-slate-200 flex items-center justify-center">
-              {/* Simulated workspace photo */}
-              <div className="w-full h-full relative">
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="text-center space-y-3 p-10">
-                    <div className="flex justify-center gap-3">
-                      {[1, 2, 3].map((n) => (
-                        <div key={n} className="w-12 h-12 rounded-full bg-slate-200 border-2 border-white shadow-sm" />
-                      ))}
-                    </div>
-                    <div className="w-32 h-1.5 rounded-full bg-slate-200 mx-auto" />
-                    <div className="w-20 h-1.5 rounded-full bg-slate-200 mx-auto" />
-                    <p className="text-xs text-slate-400 font-medium pt-2">Team · Workspace</p>
-                  </div>
+          <MotionStagger className="grid grid-cols-2 gap-4">
+            {HOME_STATS.map((stat) => (
+              <MotionStaggerItem key={stat.label}>
+                <div className="bg-white border border-[#E2E8F0] rounded-xl p-5 sm:p-6 shadow-sm h-full">
+                  <p className="text-2xl sm:text-3xl font-extrabold text-[#0F172A]">{stat.value}</p>
+                  <p className="text-[11px] text-[#64748B] mt-1 leading-snug">{stat.label}</p>
                 </div>
-              </div>
-            </div>
-
-            {/* Floating stat cards */}
-            <div className="absolute bottom-4 left-4 bg-white border border-[#E2E8F0] rounded-xl shadow-lg px-4 py-3">
-              <p className="text-xl font-extrabold text-[#0F172A]">250+</p>
-              <p className="text-[10px] text-[#64748B] mt-0.5">Projects Delivered</p>
-            </div>
-            <div className="absolute top-4 right-4 bg-white border border-[#E2E8F0] rounded-xl shadow-lg px-4 py-3">
-              <p className="text-xl font-extrabold text-[#0284C7]">98%</p>
-              <p className="text-[10px] text-[#64748B] mt-0.5">Client Retention</p>
-            </div>
-          </div>
+              </MotionStaggerItem>
+            ))}
+          </MotionStagger>
         </div>
       </div>
     </section>
