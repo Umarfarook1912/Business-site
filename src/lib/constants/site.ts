@@ -1,9 +1,9 @@
 export const SITE = {
   name: "Growza",
-  tagline: "Strategic Software Consultation & Development",
-  title: "Growza | Expert Software Solutions & Consultation",
+  tagline: "IT Consulting & Software Development",
+  title: "Growza | IT Consulting, Web & Mobile Development",
   description:
-    "We build high-performance websites, custom web applications, and business automation systems that help companies scale faster.",
+    "Growza delivers IT consulting, website and mobile app development, hosting, SEO, DevOps, and API integrations — built with agile practices and clean, maintainable code.",
   url: "https://github.com/Umarfarook1912",
   metadataBase: "https://github.com/Umarfarook1912",
   locale: "en_US",
@@ -14,3 +14,19 @@ export const CONTACT = {
   phone: "+91 78716 94931",
   address: "Dindigul, Tamil Nadu, India",
 } as const;
+
+export const COMPANY = {
+  vision:
+    "To empower businesses with reliable, scalable software that simplifies operations and accelerates growth.",
+  mission:
+    "We deliver end-to-end IT solutions — from consulting and development to hosting and integrations — using agile delivery, reusable components, and technologies our team uses every day.",
+} as const;
+
+export const CODING_PRINCIPLES = [
+  "DRY principle — don't repeat yourself",
+  "UNDOAT principle — keep solutions simple and purposeful",
+  "Files under 250 lines for maintainability",
+  "Global constants and shared configuration files",
+  "Reusable components across the codebase",
+  "Agile methodology with iterative delivery",
+] as const;

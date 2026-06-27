@@ -1,18 +1,12 @@
 export const ROUTES = {
   home: "/",
-  consultation: "#consultation",
-  work: "/#portfolio",
-  portfolio: "#portfolio",
-  services: "#services",
-  whyChoose: "#why-choose",
-  contact: "#contact",
-} as const;
-
-export const ANCHOR_IDS = {
-  portfolio: "portfolio",
-  services: "services",
-  industries: "industries",
-  whyChoose: "why-choose",
-  consultation: "consultation",
-  contact: "contact",
+  services: "/services",
+  techStack: "/tech-stack",
+  about: "/about",
+  consultation: "/#consultation",
+  projects: "/#projects",
+  reviews: "/#reviews",
+  principles: "/#principles",
+  faq: "/#faq",
+  blog: "/blog",
 } as const;
