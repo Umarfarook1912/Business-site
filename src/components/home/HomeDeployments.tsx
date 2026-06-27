@@ -1,11 +1,18 @@
+import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, ChevronLeft, ChevronRight } from "lucide-react";
 import { HOME_DEPLOYMENTS, ROUTES } from "@/lib/constants";
 
-const CARD_COLORS = [
-  { bg: "from-slate-700 to-slate-900", label: "bg-blue-500/20 text-blue-200" },
-  { bg: "from-slate-600 to-slate-800", label: "bg-emerald-500/20 text-emerald-200" },
-  { bg: "from-slate-500 to-slate-700", label: "bg-amber-500/20 text-amber-200" },
+const CARD_IMAGES = [
+  "/assets/recent_project/erp.png",
+  "/assets/recent_project/ecom.png",
+  "/assets/recent_project/data.png",
+];
+
+const CARD_LABEL_COLORS = [
+  "bg-blue-500/20 text-blue-100",
+  "bg-emerald-500/20 text-emerald-100",
+  "bg-amber-500/20 text-amber-100",
 ];
 
 export function HomeDeployments() {
@@ -41,15 +48,27 @@ export function HomeDeployments() {
         {/* Cards grid */}
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
           {HOME_DEPLOYMENTS.map((item, i) => {
-            const colors = CARD_COLORS[i % CARD_COLORS.length];
+            const image = CARD_IMAGES[i % CARD_IMAGES.length];
+            const labelColor = CARD_LABEL_COLORS[i % CARD_LABEL_COLORS.length];
             return (
               <article
                 key={item.title}
                 className="bg-white border border-[#E2E8F0] rounded-xl overflow-hidden hover:shadow-[0_8px_30px_rgba(15,23,42,0.10)] hover:-translate-y-1 transition-all duration-300"
               >
-                {/* Visual area — styled placeholder matching reference */}
-                <div className={`aspect-[16/9] bg-gradient-to-br ${colors.bg} flex items-end p-4`}>
-                  <span className={`text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-full ${colors.label} backdrop-blur-sm`}>
+                {/* Visual area — actual project image */}
+                <div className="relative aspect-[16/9] bg-slate-900 flex items-end p-4 overflow-hidden">
+                  <Image
+                    src={image}
+                    alt={item.title}
+                    fill
+                    sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
+                    className="object-cover"
+                  />
+                  {/* subtle overlay so the tag stays readable on any image */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/0 to-black/0" />
+                  <span
+                    className={`relative z-10 text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-full ${labelColor} backdrop-blur-sm`}
+                  >
                     {item.tag}
                   </span>
                 </div>

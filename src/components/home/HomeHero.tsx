@@ -1,4 +1,7 @@
+
+
 import Link from "next/link";
+import Image from "next/image";
 import { ArrowRight } from "lucide-react";
 import { HOME_HERO } from "@/lib/constants";
 
@@ -41,24 +44,17 @@ export function HomeHero() {
             </div>
           </div>
 
-          {/* Image placeholder — styled like reference */}
+          {/* Hero image */}
           <div className="relative rounded-2xl overflow-hidden border border-[#E2E8F0] shadow-xl bg-white">
-            <div className="aspect-[4/3] bg-gradient-to-br from-slate-100 via-slate-50 to-slate-200 flex items-center justify-center">
-              {/* Simulated workspace photo */}
-              <div className="w-full h-full relative">
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="text-center space-y-3 p-10">
-                    <div className="flex justify-center gap-3">
-                      {[1, 2, 3].map((n) => (
-                        <div key={n} className="w-12 h-12 rounded-full bg-slate-200 border-2 border-white shadow-sm" />
-                      ))}
-                    </div>
-                    <div className="w-32 h-1.5 rounded-full bg-slate-200 mx-auto" />
-                    <div className="w-20 h-1.5 rounded-full bg-slate-200 mx-auto" />
-                    <p className="text-xs text-slate-400 font-medium pt-2">Team · Workspace</p>
-                  </div>
-                </div>
-              </div>
+            <div className="aspect-[4/3] relative">
+              <Image
+                src="/assets/hero_section.png"
+                alt="Team collaborating in a modern workspace"
+                fill
+                priority
+                className="object-cover"
+                sizes="(max-width: 1024px) 100vw, 50vw"
+              />
             </div>
 
             {/* Floating stat cards */}
