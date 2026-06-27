@@ -1,9 +1,4 @@
-const AGILE_STEPS = [
-  { step: "Discover & Plan", detail: "Understand requirements, scope, and timelines in short planning sessions." },
-  { step: "Build in Sprints", detail: "Deliver working increments every sprint with clear demos and feedback." },
-  { step: "Review & Refine", detail: "Peer reviews, SonarQube checks, and reusable components keep quality high." },
-  { step: "Deploy & Support", detail: "Ship to Hostinger, GoDaddy, or AWS with monitoring and post-launch support." },
-] as const;
+import { SERVICE_METHODOLOGY } from "./service-methodology";
 
 export const SERVICES_HERO = {
   eyebrow: "What We Offer",
@@ -20,10 +15,10 @@ export const SERVICES_LIST = [
     title: "IT & Consulting",
     headline: "Clear technical direction for your next move.",
     description:
-      "We help you choose the right stack, plan architecture, and align technology with business goals before development begins.",
+      "We help you choose the right stack, plan architecture, and align technology with business goals before a single line of code is written.",
     image: "/services/it_consulting_1.png",
-    methodology: AGILE_STEPS,
-    capabilities: ["Technology assessment", "Solution architecture", "Project planning", "Stack recommendations"],
+    methodology: SERVICE_METHODOLOGY["it-consulting"],
+    capabilities: ["Technology assessment", "Solution architecture", "Project planning", "Stack recommendations", "Vendor evaluation"],
   },
   {
     id: "website-development",
@@ -32,10 +27,10 @@ export const SERVICES_LIST = [
     title: "Website Development",
     headline: "Fast, responsive websites that represent your brand.",
     description:
-      "We build marketing sites, dashboards, and web apps using React, Next.js, Vite, Astro, and TypeScript with clean, maintainable code.",
+      "Marketing sites, dashboards, and web apps built with React, Next.js, Vite, Astro, and TypeScript — optimized for speed and SEO from day one.",
     image: "/services/website_development_2.png",
-    methodology: AGILE_STEPS,
-    capabilities: ["React & Next.js apps", "Vite & Astro sites", "Responsive UI", "API integration"],
+    methodology: SERVICE_METHODOLOGY["website-development"],
+    capabilities: ["React & Next.js apps", "Vite & Astro sites", "Responsive UI", "API integration", "CMS setup"],
   },
   {
     id: "mobile-app-development",
@@ -44,10 +39,10 @@ export const SERVICES_LIST = [
     title: "Mobile App Development",
     headline: "Cross-platform apps built for real users.",
     description:
-      "Flutter and React Native apps with polished UX, reliable performance, and backend integration for iOS and Android.",
+      "Flutter and React Native apps with polished UX, push notifications, and secure backend integration for both iOS and Android stores.",
     image: "/services/mobile_app_3.png",
-    methodology: AGILE_STEPS,
-    capabilities: ["Flutter apps", "React Native apps", "App store readiness", "Backend connectivity"],
+    methodology: SERVICE_METHODOLOGY["mobile-app-development"],
+    capabilities: ["Flutter apps", "React Native apps", "Push notifications", "App store readiness", "Backend connectivity"],
   },
   {
     id: "hosting",
@@ -56,10 +51,10 @@ export const SERVICES_LIST = [
     title: "Hosting",
     headline: "Reliable hosting setup and deployment.",
     description:
-      "We configure and manage hosting on Hostinger, GoDaddy, and AWS so your applications stay online and performant.",
+      "We configure, deploy, and maintain hosting on Hostinger, GoDaddy, and AWS — including domains, SSL, backups, and uptime monitoring.",
     image: "/services/hosting_4.png",
-    methodology: AGILE_STEPS,
-    capabilities: ["Hostinger setup", "GoDaddy deployment", "AWS cloud hosting", "Domain & SSL configuration"],
+    methodology: SERVICE_METHODOLOGY.hosting,
+    capabilities: ["Hostinger setup", "GoDaddy deployment", "AWS cloud hosting", "Domain & SSL", "Backup routines"],
   },
   {
     id: "seo-optimization",
@@ -68,10 +63,10 @@ export const SERVICES_LIST = [
     title: "SEO Optimization",
     headline: "Help customers find you online.",
     description:
-      "On-page SEO, performance tuning, and structured content improvements to improve search visibility and page speed.",
+      "Technical SEO audits, on-page improvements, and performance tuning so your site ranks better and loads faster for every visitor.",
     image: "/services/seo_5.png",
-    methodology: AGILE_STEPS,
-    capabilities: ["On-page SEO", "Meta & sitemap setup", "Performance optimization", "Analytics setup"],
+    methodology: SERVICE_METHODOLOGY["seo-optimization"],
+    capabilities: ["Technical SEO audit", "Meta & sitemap setup", "Core Web Vitals", "Schema markup", "Analytics setup"],
   },
   {
     id: "devops",
@@ -80,10 +75,10 @@ export const SERVICES_LIST = [
     title: "DevOps",
     headline: "Automated pipelines and reliable releases.",
     description:
-      "CI/CD with GitHub Actions and Jenkins, code quality with SonarQube, and analytics with PostHog for smoother delivery.",
+      "CI/CD pipelines, code quality gates, and staging environments so your team ships confidently without production surprises.",
     image: "/services/devops_5.png",
-    methodology: AGILE_STEPS,
-    capabilities: ["GitHub Actions pipelines", "Jenkins automation", "SonarQube code quality", "PostHog analytics"],
+    methodology: SERVICE_METHODOLOGY.devops,
+    capabilities: ["GitHub Actions pipelines", "Jenkins automation", "SonarQube quality gates", "PostHog analytics", "Staging deploys"],
   },
   {
     id: "whatsapp-api",
@@ -92,10 +87,10 @@ export const SERVICES_LIST = [
     title: "WhatsApp API Integration",
     headline: "Reach customers on WhatsApp at scale.",
     description:
-      "Integrate WhatsApp Business API for notifications, support messages, and automated customer communication flows.",
+      "WhatsApp Business API integration for order updates, support chats, and automated notifications through a channel customers already use daily.",
     image: "/services/whatsapp_7.png",
-    methodology: AGILE_STEPS,
-    capabilities: ["WhatsApp Business API", "Automated messaging", "Webhook handling", "Template management"],
+    methodology: SERVICE_METHODOLOGY["whatsapp-api"],
+    capabilities: ["WhatsApp Business API", "Template messaging", "Webhook handling", "Two-way support", "Delivery tracking"],
   },
   {
     id: "email-notification",
@@ -104,10 +99,10 @@ export const SERVICES_LIST = [
     title: "Email Notification",
     headline: "Timely email alerts your users can trust.",
     description:
-      "Transactional and notification emails for sign-ups, orders, password resets, and system alerts with reliable delivery.",
+      "Transactional emails for sign-ups, orders, password resets, and system alerts — designed, wired, and monitored for reliable inbox delivery.",
     image: "/services/email_8.png",
-    methodology: AGILE_STEPS,
-    capabilities: ["SMTP integration", "Transactional emails", "Template design", "Delivery monitoring"],
+    methodology: SERVICE_METHODOLOGY["email-notification"],
+    capabilities: ["Nodemailer / SMTP setup", "HTML email templates", "Queued delivery", "Bounce handling", "Event triggers"],
   },
   {
     id: "mobile-otp",
@@ -116,10 +111,10 @@ export const SERVICES_LIST = [
     title: "Mobile OTP Integration",
     headline: "Secure phone-based verification.",
     description:
-      "OTP-based login and verification flows for mobile apps and web platforms with secure token handling.",
+      "SMS OTP login and verification for mobile apps and web platforms — with rate limiting, secure token handling, and a smooth user experience.",
     image: "/services/otp_integration_9.png",
-    methodology: AGILE_STEPS,
-    capabilities: ["SMS OTP delivery", "Login verification", "Rate limiting", "Secure token storage"],
+    methodology: SERVICE_METHODOLOGY["mobile-otp"],
+    capabilities: ["SMS OTP delivery", "Login verification", "Rate limiting", "Secure token storage", "Multi-provider support"],
   },
 ] as const;
 

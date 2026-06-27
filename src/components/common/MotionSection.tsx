@@ -16,7 +16,7 @@ export function MotionSection({
     whileInView: { opacity: 1, y: 0 },
     viewport: FRAMER_VIEWPORT,
     transition: { duration: 0.55, delay, ease: [0.25, 0.1, 0.25, 1] as const },
-    className: cn(className),
+    className: cn("w-full max-w-full min-w-0", className),
   };
 
   if (as === "section") return <motion.section {...props}>{children}</motion.section>;

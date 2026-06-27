@@ -11,10 +11,10 @@ export const metadata = {
 export default function TechStackPage() {
   return (
     <>
-      <section className="bg-navy text-white py-16">
+      <section className="bg-navy text-white py-12 sm:py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <p className="text-sky text-[10px] font-bold uppercase tracking-widest mb-4">Our Tech Stack</p>
-          <h1 className="text-3xl sm:text-4xl font-bold leading-tight max-w-2xl">
+          <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold leading-tight max-w-2xl">
             Technologies we use every day.
           </h1>
           <p className="mt-4 text-slate-300 text-sm leading-relaxed max-w-xl">
@@ -23,7 +23,7 @@ export default function TechStackPage() {
         </div>
       </section>
 
-      <section className="bg-off-white py-16">
+      <section className="bg-off-white py-12 sm:py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <TechStackFilter />
         </div>

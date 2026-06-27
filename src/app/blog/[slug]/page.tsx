@@ -25,13 +25,13 @@ export default async function BlogPostPage({ params }: Props) {
 
   return (
     <>
-      <section className="bg-navy text-white py-14">
-        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-          <Link href={ROUTES.blog} className="text-xs text-sky inline-flex items-center gap-1 mb-6 hover:gap-2 transition-all">
+      <section className="bg-navy text-white py-12 sm:py-14">
+        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 min-w-0">
+          <Link href={ROUTES.blog} className="text-xs text-sky inline-flex items-center gap-1 mb-5 sm:mb-6 hover:gap-2 transition-all">
             <ArrowLeft size={12} /> Back to blog
           </Link>
           <span className="text-[10px] font-bold uppercase tracking-widest text-sky block mb-3">{post.category}</span>
-          <h1 className="text-2xl sm:text-4xl font-bold leading-tight">{post.title}</h1>
+          <h1 className="text-xl sm:text-3xl lg:text-4xl font-bold leading-tight">{post.title}</h1>
           <div className="flex items-center gap-1.5 text-xs text-slate-400 mt-4">
             <Calendar size={12} />
             {post.date} · {post.readTime}
@@ -39,8 +39,8 @@ export default async function BlogPostPage({ params }: Props) {
         </div>
       </section>
 
-      <article className="bg-white py-12">
-        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 space-y-5">
+      <article className="bg-white py-10 sm:py-12">
+        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 space-y-4 sm:space-y-5">
           {paragraphs.map((para) => (
             <p key={para.slice(0, 24)} className="text-sm sm:text-base text-charcoal/80 leading-relaxed">
               {para}

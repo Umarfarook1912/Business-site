@@ -61,8 +61,8 @@ export function SiteHeader() {
     <header className="sticky top-0 z-50 bg-navy border-b border-slate-800">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
-          <Link href={ROUTES.home} className="flex items-center gap-2 shrink-0">
-            <span className="text-xl font-bold text-white tracking-tight">
+          <Link href={ROUTES.home} className="flex items-center gap-2 shrink-0 min-w-0">
+            <span className="text-lg sm:text-xl font-bold text-white tracking-tight truncate">
               {SITE.name.toUpperCase()}
             </span>
           </Link>
@@ -88,11 +88,11 @@ export function SiteHeader() {
       </div>
 
       {mobileOpen && (
-        <div className="lg:hidden bg-navy border-t border-slate-800 px-4 py-4 space-y-1 max-h-[80vh] overflow-y-auto">
+        <div className="lg:hidden bg-navy border-t border-slate-800 px-4 py-4 space-y-1 max-h-[80vh] overflow-y-auto overscroll-contain">
           {NAV_LINKS.map((link) => renderNavItem(link, true))}
           <Link
             href={ROUTES.consultation}
-            className="btn-sky text-sm inline-block mt-3"
+            className="btn-sky text-sm block w-full text-center mt-3"
             onClick={closeMobile}
           >
             Book a Consultation

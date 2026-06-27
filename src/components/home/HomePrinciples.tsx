@@ -38,8 +38,8 @@ export function HomePrinciples() {
   };
 
   return (
-    <section className="bg-navy text-white py-16" id="principles">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="bg-navy text-white py-12 sm:py-16" id="principles">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 min-w-0">
         <MotionSection className="max-w-2xl mb-10">
           <p className="text-sky text-[10px] font-bold uppercase tracking-widest mb-2">How We Code</p>
           <h2 className="text-2xl sm:text-3xl font-bold leading-tight">
@@ -51,7 +51,7 @@ export function HomePrinciples() {
         </MotionSection>
 
         <div
-          className="grid lg:grid-cols-5 gap-6"
+          className="grid lg:grid-cols-5 gap-4 sm:gap-6 min-w-0"
           onMouseEnter={() => setPaused(true)}
           onMouseLeave={() => setPaused(false)}
           onFocus={() => setPaused(true)}
@@ -59,14 +59,15 @@ export function HomePrinciples() {
             if (!e.currentTarget.contains(e.relatedTarget as Node)) setPaused(false);
           }}
         >
-          <div className="lg:col-span-2 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-2 gap-2">
+          <div className="lg:col-span-2 flex lg:grid lg:grid-cols-2 gap-2 min-w-0 overflow-x-auto scrollbar-hide lg:overflow-visible snap-x snap-mandatory -mx-4 px-4 sm:-mx-6 sm:px-6 lg:mx-0 lg:px-0 pb-1 lg:pb-0">
             {DEVELOPMENT_PRINCIPLES.map((p) => (
               <button
                 key={p.id}
                 type="button"
                 onClick={() => selectPrinciple(p.id)}
                 className={cn(
-                  "text-left rounded-lg border px-3 py-3 transition-all duration-200",
+                  "text-left rounded-lg border px-3 py-2.5 sm:py-3 transition-all duration-200 min-w-0",
+                  "shrink-0 w-[132px] sm:w-auto snap-start lg:shrink lg:w-auto lg:snap-align-none",
                   activeId === p.id
                     ? "border-sky bg-sky/15 shadow-[0_0_20px_rgba(2,132,199,0.25)]"
                     : "border-slate-700 bg-white/5 hover:border-slate-500 hover:bg-white/10"
@@ -83,15 +84,15 @@ export function HomePrinciples() {
             ))}
           </div>
 
-          <div className="lg:col-span-3">
+          <div className="lg:col-span-3 min-w-0">
             <AnimatePresence mode="wait">
               <motion.div
                 key={active.id}
-                initial={{ opacity: 0, x: 16 }}
-                animate={{ opacity: 1, x: 0 }}
-                exit={{ opacity: 0, x: -16 }}
+                initial={{ opacity: 0, y: 12 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -12 }}
                 transition={{ duration: 0.25 }}
-                className="h-full bg-white/5 border border-slate-700 rounded-xl p-6 sm:p-8"
+                className="h-full bg-white/5 border border-slate-700 rounded-xl p-5 sm:p-8"
               >
                 <div className="flex items-center gap-2 mb-4">
                   <div className="w-8 h-8 rounded-lg bg-sky/20 flex items-center justify-center">

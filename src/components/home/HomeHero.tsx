@@ -15,11 +15,11 @@ export function HomeHero() {
           backgroundSize: "48px 48px",
         }}
       />
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-24">
-        <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-24">
+        <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center min-w-0">
           <MotionSection>
             <p className="section-label mb-4">{HOME_HERO.eyebrow}</p>
-            <h1 className="text-[2.5rem] sm:text-5xl lg:text-[3.25rem] font-extrabold text-[#0F172A] leading-[1.12] tracking-tight">
+            <h1 className="text-3xl sm:text-5xl lg:text-[3.25rem] font-extrabold text-[#0F172A] leading-[1.12] tracking-tight">
               {HOME_HERO.headline.split("\n").map((line, i) => (
                 <span key={i}>
                   {line}
@@ -30,12 +30,12 @@ export function HomeHero() {
             <p className="mt-5 text-sm sm:text-base text-[#334155] leading-relaxed max-w-md">
               {HOME_HERO.subheadline}
             </p>
-            <div className="mt-8 flex flex-wrap gap-3">
-              <Link href={HOME_HERO.primaryCta.href} className="btn-sky inline-flex items-center gap-2 text-sm">
+            <div className="mt-8 flex flex-col sm:flex-row flex-wrap gap-3">
+              <Link href={HOME_HERO.primaryCta.href} className="btn-sky inline-flex items-center justify-center gap-2 text-sm w-full sm:w-auto">
                 {HOME_HERO.primaryCta.label}
                 <ArrowRight size={14} />
               </Link>
-              <Link href={HOME_HERO.secondaryCta.href} className="btn-outline inline-flex items-center gap-2 text-sm">
+              <Link href={HOME_HERO.secondaryCta.href} className="btn-outline inline-flex items-center justify-center gap-2 text-sm w-full sm:w-auto">
                 {HOME_HERO.secondaryCta.label}
                 <ArrowRight size={14} />
               </Link>

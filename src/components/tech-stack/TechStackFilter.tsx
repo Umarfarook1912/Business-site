@@ -25,14 +25,14 @@ export function TechStackFilter() {
 
   return (
     <div>
-      <div className="flex flex-wrap gap-2 mb-10">
+      <div className="flex flex-wrap gap-2 mb-8 sm:mb-10">
         {TECH_CATEGORIES.map((cat) => (
           <button
             key={cat}
             type="button"
             onClick={() => setActive(cat)}
             className={cn(
-              "px-4 py-2 rounded-full text-sm font-medium border transition-colors",
+              "px-3 py-1.5 sm:px-4 sm:py-2 rounded-full text-xs sm:text-sm font-medium border transition-colors",
               active === cat
                 ? "bg-navy text-white border-navy"
                 : "bg-white text-charcoal border-border-light hover:border-navy/50 hover:text-navy"
@@ -50,7 +50,7 @@ export function TechStackFilter() {
         // instances at the same position. This is what was causing logos
         // to vanish (and stay vanished, even going back to "All").
         key={active}
-        className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4"
+        className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-3 sm:gap-4"
         initial="hidden"
         whileInView="show"
         viewport={FRAMER_VIEWPORT}
@@ -68,7 +68,7 @@ export function TechStackFilter() {
               hidden: { opacity: 0, scale: 0.92 },
               show: { opacity: 1, scale: 1, transition: { duration: 0.35 } },
             }}
-            className="bg-white border border-border-light rounded-xl p-4 flex flex-col items-center gap-3 card-hover text-center"
+            className="bg-white border border-border-light rounded-xl p-3 sm:p-4 flex flex-col items-center gap-2 sm:gap-3 card-hover text-center min-w-0"
           >
             <div className="w-10 h-10 flex items-center justify-center">
               <TechLogo name={tech.name} logo={tech.logo} size={36} />

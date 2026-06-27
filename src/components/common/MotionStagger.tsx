@@ -26,7 +26,7 @@ export function MotionStagger({ children, className }: MotionStaggerProps) {
       initial="hidden"
       whileInView="show"
       viewport={FRAMER_VIEWPORT}
-      className={cn(className)}
+      className={cn("w-full max-w-full min-w-0", className)}
     >
       {children}
     </motion.div>
@@ -41,7 +41,7 @@ export function MotionStaggerItem({
   className?: string;
 }) {
   return (
-    <motion.div variants={item} className={cn(className)}>
+    <motion.div variants={item} className={cn("w-full min-w-0", className)}>
       {children}
     </motion.div>
   );

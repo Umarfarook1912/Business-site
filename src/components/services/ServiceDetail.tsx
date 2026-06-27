@@ -1,19 +1,25 @@
 import Image from "next/image";
 import { CheckCircle2 } from "lucide-react";
+import { cn } from "@/lib/utils";
 import type { SERVICES_LIST } from "@/lib/constants";
 
 type Service = (typeof SERVICES_LIST)[number];
 
-export function ServiceDetail({ service }: { service: Service }) {
+export function ServiceDetail({ service, compact = false }: { service: Service; compact?: boolean }) {
   return (
-    <section id={service.id} className="py-14 scroll-mt-28 border-b border-[#F1F5F9] last:border-0">
-      <div>
-        {/* Tag + title */}
-        <div className="flex items-center gap-3 mb-3">
+    <section
+      id={service.id}
+      className={cn(
+        "scroll-mt-24 sm:scroll-mt-28 min-w-0",
+        compact ? "py-2" : "py-10 sm:py-14 border-b border-[#F1F5F9] last:border-0"
+      )}
+    >
+      <div className="min-w-0">
+        <div className="flex items-start gap-3 mb-3 min-w-0">
           <span className="w-7 h-7 rounded-full bg-sky text-white text-[10px] font-bold flex items-center justify-center flex-shrink-0">
             {service.tag}
           </span>
-          <span className="text-[10px] font-bold uppercase tracking-widest text-slate-400">
+          <span className="text-[10px] font-bold uppercase tracking-widest text-slate-400 min-w-0 break-words leading-snug">
             {service.title}
           </span>
         </div>
@@ -24,7 +30,7 @@ export function ServiceDetail({ service }: { service: Service }) {
         <p className="text-sm text-[#64748B] leading-relaxed mb-7 max-w-lg">{service.description}</p>
 
         {/* Service image */}
-        <div className="rounded-xl overflow-hidden border border-[#E2E8F0] bg-gradient-to-br from-slate-50 to-slate-100 mb-8 aspect-[16/7] relative">
+        <div className="rounded-xl overflow-hidden border border-[#E2E8F0] bg-gradient-to-br from-slate-50 to-slate-100 mb-6 sm:mb-8 aspect-[16/10] sm:aspect-[16/7] relative">
           <Image
             src={service.image}
             alt={`${service.title} preview`}
