@@ -21,6 +21,7 @@ export const SERVICES_LIST = [
     headline: "Clear technical direction for your next move.",
     description:
       "We help you choose the right stack, plan architecture, and align technology with business goals before development begins.",
+    image: "/services/it_consulting_1.png",
     methodology: AGILE_STEPS,
     capabilities: ["Technology assessment", "Solution architecture", "Project planning", "Stack recommendations"],
   },
@@ -32,6 +33,7 @@ export const SERVICES_LIST = [
     headline: "Fast, responsive websites that represent your brand.",
     description:
       "We build marketing sites, dashboards, and web apps using React, Next.js, Vite, Astro, and TypeScript with clean, maintainable code.",
+    image: "/services/website_development_2.png",
     methodology: AGILE_STEPS,
     capabilities: ["React & Next.js apps", "Vite & Astro sites", "Responsive UI", "API integration"],
   },
@@ -43,6 +45,7 @@ export const SERVICES_LIST = [
     headline: "Cross-platform apps built for real users.",
     description:
       "Flutter and React Native apps with polished UX, reliable performance, and backend integration for iOS and Android.",
+    image: "/services/mobile_app_3.png",
     methodology: AGILE_STEPS,
     capabilities: ["Flutter apps", "React Native apps", "App store readiness", "Backend connectivity"],
   },
@@ -54,6 +57,7 @@ export const SERVICES_LIST = [
     headline: "Reliable hosting setup and deployment.",
     description:
       "We configure and manage hosting on Hostinger, GoDaddy, and AWS so your applications stay online and performant.",
+    image: "/services/hosting_4.png",
     methodology: AGILE_STEPS,
     capabilities: ["Hostinger setup", "GoDaddy deployment", "AWS cloud hosting", "Domain & SSL configuration"],
   },
@@ -65,6 +69,7 @@ export const SERVICES_LIST = [
     headline: "Help customers find you online.",
     description:
       "On-page SEO, performance tuning, and structured content improvements to improve search visibility and page speed.",
+    image: "/services/seo_5.png",
     methodology: AGILE_STEPS,
     capabilities: ["On-page SEO", "Meta & sitemap setup", "Performance optimization", "Analytics setup"],
   },
@@ -76,6 +81,7 @@ export const SERVICES_LIST = [
     headline: "Automated pipelines and reliable releases.",
     description:
       "CI/CD with GitHub Actions and Jenkins, code quality with SonarQube, and analytics with PostHog for smoother delivery.",
+    image: "/services/devops_5.png",
     methodology: AGILE_STEPS,
     capabilities: ["GitHub Actions pipelines", "Jenkins automation", "SonarQube code quality", "PostHog analytics"],
   },
@@ -87,6 +93,7 @@ export const SERVICES_LIST = [
     headline: "Reach customers on WhatsApp at scale.",
     description:
       "Integrate WhatsApp Business API for notifications, support messages, and automated customer communication flows.",
+    image: "/services/whatsapp_7.png",
     methodology: AGILE_STEPS,
     capabilities: ["WhatsApp Business API", "Automated messaging", "Webhook handling", "Template management"],
   },
@@ -98,6 +105,7 @@ export const SERVICES_LIST = [
     headline: "Timely email alerts your users can trust.",
     description:
       "Transactional and notification emails for sign-ups, orders, password resets, and system alerts with reliable delivery.",
+    image: "/services/email_8.png",
     methodology: AGILE_STEPS,
     capabilities: ["SMTP integration", "Transactional emails", "Template design", "Delivery monitoring"],
   },
@@ -109,6 +117,7 @@ export const SERVICES_LIST = [
     headline: "Secure phone-based verification.",
     description:
       "OTP-based login and verification flows for mobile apps and web platforms with secure token handling.",
+    image: "/services/otp_integration_9.png",
     methodology: AGILE_STEPS,
     capabilities: ["SMS OTP delivery", "Login verification", "Rate limiting", "Secure token storage"],
   },
@@ -118,5 +127,6 @@ export const HOME_SERVICES = SERVICES_LIST.map((s) => ({
   icon: s.icon,
   title: s.title,
   description: s.description,
+  image: s.image,
   href: `/services#${s.id}`,
 }));
