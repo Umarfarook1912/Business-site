@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { CheckCircle2 } from "lucide-react";
 import type { SERVICES_LIST } from "@/lib/constants";
 
@@ -22,18 +23,15 @@ export function ServiceDetail({ service }: { service: Service }) {
         </h2>
         <p className="text-sm text-[#64748B] leading-relaxed mb-7 max-w-lg">{service.description}</p>
 
-        {/* Screenshot mockup */}
-        <div className="rounded-xl overflow-hidden border border-[#E2E8F0] bg-gradient-to-br from-slate-50 to-slate-100 mb-8 aspect-[16/7] flex items-center justify-center">
-          <div className="flex flex-col items-center gap-3">
-            <div className="w-12 h-8 rounded bg-slate-200 border border-slate-300" />
-            <div className="flex gap-2">
-              <div className="w-16 h-1.5 rounded-full bg-slate-200" />
-              <div className="w-10 h-1.5 rounded-full bg-slate-200" />
-            </div>
-            <p className="text-[10px] text-slate-400 font-medium">
-              {service.title} · Deployment Preview
-            </p>
-          </div>
+        {/* Service image */}
+        <div className="rounded-xl overflow-hidden border border-[#E2E8F0] bg-gradient-to-br from-slate-50 to-slate-100 mb-8 aspect-[16/7] relative">
+          <Image
+            src={service.image}
+            alt={`${service.title} preview`}
+            fill
+            className="object-cover"
+            sizes="(max-width: 768px) 100vw, 800px"
+          />
         </div>
 
         {/* Our Approach */}

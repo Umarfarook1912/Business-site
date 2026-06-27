@@ -29,6 +29,7 @@ export function TechStackFilter() {
         {TECH_CATEGORIES.map((cat) => (
           <button
             key={cat}
+            type="button"
             onClick={() => setActive(cat)}
             className={cn(
               "px-4 py-2 rounded-full text-sm font-medium border transition-colors",
@@ -43,6 +44,12 @@ export function TechStackFilter() {
       </div>
 
       <motion.div
+        // Re-key the whole grid by the active filter so React tears down
+        // and rebuilds the grid (and every TechLogo inside it) from scratch
+        // on every category change, instead of reusing/recycling old item
+        // instances at the same position. This is what was causing logos
+        // to vanish (and stay vanished, even going back to "All").
+        key={active}
         className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4"
         initial="hidden"
         whileInView="show"
@@ -54,7 +61,9 @@ export function TechStackFilter() {
       >
         {filtered.map((tech) => (
           <motion.div
-            key={`${tech.name}-${tech.category}`}
+            // Name alone is a stable, unique identifier across the whole
+            // TECH_STACK array — no need to compose it with category.
+            key={tech.name}
             variants={{
               hidden: { opacity: 0, scale: 0.92 },
               show: { opacity: 1, scale: 1, transition: { duration: 0.35 } },
