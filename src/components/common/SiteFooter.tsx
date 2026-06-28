@@ -58,12 +58,12 @@ export function SiteFooter() {
             </span>
           </div>
 
-          <div className="mt-5 grid grid-cols-2 gap-2">
+          <div className="mt-5 flex flex-wrap gap-x-5 gap-y-2">
             {FOOTER_MOBILE_QUICK.map((l) => (
               <Link
                 key={l.label}
                 href={l.href}
-                className="text-xs font-medium text-slate-300 hover:text-white bg-white/5 border border-slate-700 rounded-lg px-3 py-2.5 text-center transition-colors"
+                className="text-xs font-medium text-slate-300 hover:text-white transition-colors"
               >
                 {l.label}
               </Link>
