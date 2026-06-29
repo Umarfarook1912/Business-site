@@ -95,10 +95,10 @@
     @apply border-border outline-ring/50;
   }
   html {
-    @apply font-sans scroll-smooth;
+    @apply font-sans scroll-smooth overflow-x-clip;
   }
   body {
-    @apply bg-background text-foreground antialiased;
+    @apply bg-background text-foreground antialiased overflow-x-clip;
   }
 }
 
@@ -168,8 +168,15 @@
     color: #F8FAFC;
     font-weight: 600;
     border-radius: 0.5rem;
-    padding: 0.75rem 1.75rem;
+    padding: 0.625rem 1.25rem;
     transition: background 0.2s ease, transform 0.2s ease;
+  }
+  @media (min-width: 640px) {
+    .btn-primary,
+    .btn-outline,
+    .btn-sky {
+      padding: 0.75rem 1.75rem;
+    }
   }
   .btn-primary:hover {
     background: #1E293B;
@@ -181,7 +188,7 @@
     color: #0F172A;
     font-weight: 600;
     border-radius: 0.5rem;
-    padding: 0.75rem 1.75rem;
+    padding: 0.625rem 1.25rem;
     transition: border-color 0.2s ease, color 0.2s ease;
   }
   .btn-outline:hover {
@@ -194,12 +201,20 @@
     color: #FFFFFF;
     font-weight: 600;
     border-radius: 0.5rem;
-    padding: 0.75rem 1.75rem;
+    padding: 0.625rem 1.25rem;
     transition: background 0.2s ease, transform 0.2s ease;
   }
   .btn-sky:hover {
     background: #0369A1;
     transform: translateY(-1px);
+  }
+
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
   }
 }
 

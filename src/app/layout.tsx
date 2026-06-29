@@ -45,7 +45,7 @@ export default function RootLayout({
       <body className="min-h-full flex flex-col bg-background text-foreground antialiased" suppressHydrationWarning>
         <Analytics />
         <SiteHeaderClient />
-        <main className="flex-1 flex flex-col">{children}</main>
+        <main className="flex-1 flex flex-col min-w-0 overflow-x-clip">{children}</main>
         <SiteFooter />
       </body>
     </html>

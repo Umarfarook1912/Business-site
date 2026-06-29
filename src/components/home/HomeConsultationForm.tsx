@@ -3,9 +3,10 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { ArrowRight, CheckCircle2, Loader2 } from "lucide-react";
-import { CONSULTATION_STEPS, PROJECT_TYPES } from "@/lib/constants";
+import { PROJECT_TYPES } from "@/lib/constants";
 import { FRAMER_VIEWPORT } from "@/lib/constants/animations";
 import { ConsultationFormField } from "@/components/home/ConsultationFormField";
+import { ConsultationStepIndicator } from "@/components/home/ConsultationStepIndicator";
 
 type FormData = {
   fullName: string;
@@ -52,8 +53,8 @@ export function HomeConsultationForm() {
 
   if (submitted) {
     return (
-      <section className="bg-off-white py-20" id="consultation">
-        <div className="max-w-2xl mx-auto px-4 text-center">
+      <section className="bg-off-white py-12 sm:py-20" id="consultation">
+        <div className="max-w-2xl mx-auto px-4 sm:px-6 text-center">
           <CheckCircle2 className="mx-auto text-sky mb-4" size={48} />
           <h3 className="text-2xl font-bold text-navy mb-2">Request Received</h3>
           <p className="text-charcoal/70">
@@ -65,17 +66,17 @@ export function HomeConsultationForm() {
   }
 
   return (
-    <section className="bg-off-white py-20" id="consultation">
+    <section className="bg-off-white py-12 sm:py-20" id="consultation">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid lg:grid-cols-2 gap-12 items-start">
+        <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-start min-w-0">
           <motion.div
-            initial={{ opacity: 0, x: -24 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
             viewport={FRAMER_VIEWPORT}
             transition={{ duration: 0.5 }}
           >
             <p className="section-label mb-3">Get in Touch</p>
-            <h2 className="text-3xl sm:text-4xl font-bold text-navy leading-tight">
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-navy leading-tight">
               Book a Free Consultation
             </h2>
             <p className="mt-3 text-charcoal/70 leading-relaxed">
@@ -98,34 +99,13 @@ export function HomeConsultationForm() {
           </motion.div>
 
           <motion.div
-            initial={{ opacity: 0, x: 24 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
             viewport={FRAMER_VIEWPORT}
             transition={{ duration: 0.5, delay: 0.1 }}
-            className="bg-white border border-border-light rounded-xl p-8 shadow-sm"
+            className="bg-white border border-border-light rounded-xl p-5 sm:p-8 shadow-sm min-w-0"
           >
-            {/* Step indicators */}
-            <div className="flex items-center gap-2 mb-8">
-              {CONSULTATION_STEPS.map((label, i) => (
-                <div key={label} className="flex items-center gap-2">
-                  <button
-                    onClick={() => i < step && setStep(i)}
-                    className={`text-xs font-medium px-3 py-1 rounded-full transition-colors ${
-                      i === step
-                        ? "bg-sky text-white"
-                        : i < step
-                        ? "bg-sky/20 text-sky cursor-pointer"
-                        : "bg-slate-100 text-slate-400"
-                    }`}
-                  >
-                    {label}
-                  </button>
-                  {i < CONSULTATION_STEPS.length - 1 && (
-                    <div className={`h-px w-6 ${i < step ? "bg-sky" : "bg-slate-200"}`} />
-                  )}
-                </div>
-              ))}
-            </div>
+            <ConsultationStepIndicator step={step} onStepClick={setStep} />
 
             {/* Step 0: About You */}
             {step === 0 && (

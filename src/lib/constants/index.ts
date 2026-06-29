@@ -14,3 +14,4 @@ export * from "./principles";
 export * from "./faq";
 export * from "./blog";
 export * from "./about";
+export * from "./footer";

@@ -8,7 +8,7 @@ export function HomeProjectSection() {
   const project = FEATURED_PROJECT;
 
   return (
-    <section className="bg-white py-16" id="projects">
+    <section className="bg-white py-12 sm:py-16" id="projects">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <MotionSection className="max-w-xl mb-10">
           <p className="section-label mb-2">Our Work</p>
@@ -28,7 +28,7 @@ export function HomeProjectSection() {
                 sizes="(max-width: 1024px) 100vw, 50vw"
               />
             </div>
-            <div className="p-6 sm:p-8 flex flex-col">
+            <div className="p-5 sm:p-6 lg:p-8 flex flex-col min-w-0">
               <div className="flex items-start justify-between gap-3 mb-2">
                 <span className="text-[10px] font-bold uppercase tracking-widest text-sky">
                   {project.category}
