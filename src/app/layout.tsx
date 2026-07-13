@@ -3,6 +3,7 @@ import { GOOGLE_FONTS, PUBLIC_ASSETS, SITE } from "@/lib/constants";
 import { Analytics } from "@/components/common/Analytics";
 import { SiteHeaderClient } from "@/components/common/SiteHeaderClient";
 import { SiteFooter } from "@/components/common/SiteFooter";
+import { ChatWidget } from "@/components/common/ChatWidget";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -47,6 +48,7 @@ export default function RootLayout({
         <SiteHeaderClient />
         <main className="flex-1 flex flex-col min-w-0 overflow-x-clip">{children}</main>
         <SiteFooter />
+        <ChatWidget />
       </body>
     </html>
   );
