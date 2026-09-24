@@ -56,7 +56,7 @@ export const PROJECTS: ProjectItem[] = [
     ],
     image: "/projects/gifwoods.png",
     imageAlt: "Gifwoods artisanal wooden decor homepage screenshot",
-    projectUrl: "http://gifwoods.com/",
+    projectUrl: "https://gifwoods.com/",
   },
   {
     id: "vsoil-mill",
@@ -74,7 +74,24 @@ export const PROJECTS: ProjectItem[] = [
     imageAlt: "VS Oil Mill traditional wood pressed oil homepage screenshot",
     projectUrl: "https://vsoilmill.com/",
   },
+  {
+    id: "aasina-curry-house",
+    name: "Aasina Curry House",
+    category: "Culinary & Dining Experience",
+    description:
+      "A heritage Malaysian restaurant website and digital dining platform featuring authentic menu showcases, location finder, signature dish spotlights, and customer inquiry workflows.",
+    highlights: [
+      "Heritage dining & interactive menu showcase",
+      "Multi-location finder & direct contact integration",
+      "Mobile-optimized responsive culinary interface",
+      "Halal dining branding & signature dish spotlights",
+    ],
+    image: "/projects/aasinacurryhouse.png",
+    imageAlt: "Aasina Curry House restaurant website homepage screenshot",
+    projectUrl: "https://www.aasinacurryhouse.com/",
+  },
 ];
 
 export const FEATURED_PROJECT = PROJECTS[0];
+
 

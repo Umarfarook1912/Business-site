@@ -40,7 +40,7 @@ export const FOOTER_EXPLORE = [
 
 export const FOOTER_COMPANY = [
   { label: "About Us", href: ROUTES.about },
-  { label: "SoftzCart Project", href: ROUTES.projects },
+  { label: "Featured Projects", href: ROUTES.projects },
   { label: "All Services", href: ROUTES.services },
   { label: "Contact", href: ROUTES.consultation },
 ] as const;
